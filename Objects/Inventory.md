@@ -28,9 +28,8 @@ Parameters are passed as a query-string to the endpoint:
 
 Get a list of items, and check availably / pricing by date
 
-Single item
-
-<caption>Category</caption>
+### Single item
+<table>
 <tbody>
 <tr>
 <th>Description:</th>
