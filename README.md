@@ -1,5 +1,8 @@
+![Checkfront API](https://www.checkfront.com/images/brand/Checkfront-Logo-45.png)
+
 # Checkfront API
 
+Please note this documentation is specific to the v2.1 API.
 
 The Checkfront API allows developers to expand and build on the Checkfront platform. The API makes it easy to create web, desktop & mobile applications that integrate and with your Checkfront account.
 
@@ -65,11 +68,11 @@ When the rate limit is exceeded Checkfront will send an HTTP 503 status code. Th
 
 Once authenticated, a basic request to the API will return some general information about the account you are connecting to. This header information is included in all successful calls to the API, but may be left out of examples in this document.
 
-GET: http://demo.checkfront.com/api/2/
+GET: http://demo.checkfront.com/api/2.1/
 
 ```json
 {
-    "version":"2",
+    "version":"2.1",
     "id":"demo.checkfront.com",
     "name":"Demo",
     "currency_id":"USD",
@@ -79,6 +82,7 @@ GET: http://demo.checkfront.com/api/2/
 ```
 
 Error Messages
+
 ```json
 {
     "error":"invalid_request",
@@ -101,9 +105,4 @@ Check back often for additional SDKs, sample code and documentation.
 
 ### Terms of Use
 
-Checkfront API Terms of Service http://www.checkfront.com/terms/#api
-
-
-
-
-
+[Checkfront API Terms of Service](http://www.checkfront.com/terms/#api)
