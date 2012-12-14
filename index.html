@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Api by Checkfront</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Api</h1>
+        <h2>Checkfront API</h2>
+        <a href="https://github.com/Checkfront/API" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><img src="https://www.checkfront.com/images/brand/Checkfront-Logo-45.png" alt="Checkfront API"></p>
+
+<h1>Checkfront API</h1>
+
+<p>Please note this documentation is specific to the v2.1 API.</p>
+
+<p>The Checkfront API allows developers to expand and build on the Checkfront platform. The API makes it easy to create web, desktop &amp; mobile applications that integrate and with your Checkfront account.</p>
+
+<p>Our API is built around open, standard and secure technologies to streamline development and maintain integrity of your data.</p>
+
+<p>The Checkfront API extends the following functionality:</p>
+
+<ul>
+<li>Query inventory availability.</li>
+<li>Get date based rate and pricing information.</li>
+<li>Create a new booking.</li>
+<li>Update an existing booking.</li>
+<li>Retrieve customer information.</li>
+<li>Interface with existing Checkfront modules including payment gateways.</li>
+</ul><h3>Prerequisites:</h3>
+
+<p>This document assumes you have some knowledge of programming, and API implementations -- if not, please see our list of existing plug-ins and extensions or contact us to for in introduction to a qualified Checkfront developer in your area.</p>
+
+<p>Use of the API is strictly bound by the terms as specified in our terms of use.
+Developer accounts can be used to test and build applications, but real-world use of the API requires an active account in good standing.</p>
+
+<p>Some functionality documented here may not be available to you based on your plan, or access level of your account.</p>
+
+<h2>REST Interface</h2>
+
+<p>The Checkfront API uses a REST interface. This means that method calls are made over the Internet by sending standard HTTPs GET or POST requests to the Checkfront API REST server.</p>
+
+<p>Nearly any computer language can be used to communicate over HTTP with the REST server including remote web sites, mobile devices and desktop applications.</p>
+
+<h2>Authentication and Encryption (OAuth2)</h2>
+
+<p>Checkfront makes use of the open standard OAuth2 to provide secure and transparent authentication with the API. OAuth allows you to make your Checkfront account available to external applications without needing to provide your login and password.</p>
+
+<p>All queries to the API are required to be made over a SSL authenticated OAuth2 session. Checkfront currently supports Draft 20 of the OAuth2 spec. For those switching from OAuth1, you'll notice it's significantly easier to work with, and generally performs better.</p>
+
+<p>If your app isn't going to be distributed outside of your organization, you can generate oAuth2 access keys within the app to by-pass the initial authentication routine.</p>
+
+<p>Please see our SDK's or support libraries for OAuth2 in your preferred environment.</p>
+
+<h3>Endpoints</h3>
+
+<p>Every Checkfront account operates in their own segregated environment, secure by a unique domain. In most cases, this is : <a href="https://your-company.checkfront.com">https://your-company.checkfront.com</a>. In this document this will be referred to as your Checkfront URL or your-company.checkfront.com (this may differ depending on your country).</p>
+
+<ul>
+<li><a href="https://your-company.checkfront.com/api/2.1/">https://your-company.checkfront.com/api/2.1/</a></li>
+<li><a href="https://your-company.checkfront.com/oauth/">https://your-company.checkfront.com/oauth/</a></li>
+</ul><h3>Response Formatting (JSON)</h3>
+
+<p>All response is formatted in JSON (JavaScript Object Notation). To simplify the API, we no longer support XML response. All modern languages are able to quickly parse JSON. See: PHP: json_decode, Ruby: JSON.parse, .Net Json.NET, Javascript / jQuery: jQuery.getJSON.</p>
+
+<h3>Representation</h3>
+
+<ul>
+<li>All JSON should be UTF-8 encoded.</li>
+<li>Date and time values ISO 8601 formatted, eg: YYYY-MM-DD HH:MM:SS.</li>
+<li>Booleans are either 1 (true) or 0 (false).</li>
+</ul><h2>General Housekeeping</h2>
+
+<p>API throttle limit: We reserve the right to tune the limitations, but they are always set high enough to allow a well-behaving interactive program to do its job.</p>
+
+<p>When the rate limit is exceeded Checkfront will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 2616.</p>
+
+<h2>API Request</h2>
+
+<p>Once authenticated, a basic request to the API will return some general information about the account you are connecting to. This header information is included in all successful calls to the API, but may be left out of examples in this document.</p>
+
+<p>GET: <a href="http://demo.checkfront.com/api/2.1/">http://demo.checkfront.com/api/2.1/</a></p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">"version"</span><span class="p">:</span><span class="s2">"2.1"</span><span class="p">,</span>
+    <span class="nt">"id"</span><span class="p">:</span><span class="s2">"demo.checkfront.com"</span><span class="p">,</span>
+    <span class="nt">"name"</span><span class="p">:</span><span class="s2">"Demo"</span><span class="p">,</span>
+    <span class="nt">"currency_id"</span><span class="p">:</span><span class="s2">"USD"</span><span class="p">,</span>
+    <span class="nt">"currency_symbol"</span><span class="p">:</span><span class="s2">"$"</span><span class="p">,</span>
+    <span class="nt">"session_id"</span><span class="p">:</span><span class="s2">"rmvm4jf7kh02n6dde8s9f20me1"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Error Messages</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">"error"</span><span class="p">:</span><span class="s2">"invalid_request"</span><span class="p">,</span>
+    <span class="nt">"error_description"</span><span class="p">:</span><span class="s2">"The access token was not found."</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>API Notifications</h3>
+
+<p>API notifications provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / API / Notifications.</p>
+
+<h3>Sample Code</h3>
+
+<p>Our SDKs (software development kit) handles most of the complex authentication (OAuth2) issues involved with consuming the Checkfront API. They also include sample code and additional documentation and up and running with the API in no time.</p>
+
+<p>All of our SDKs are open source. If you wish to contribute please find us on Github.</p>
+
+<p>Check back often for additional SDKs, sample code and documentation.</p>
+
+<h3>Terms of Use</h3>
+
+<p><a href="http://www.checkfront.com/terms/#api">Checkfront API Terms of Service</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Checkfront/API/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Checkfront/API/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Checkfront/API"></a> is maintained by <a href="https://github.com/Checkfront">Checkfront</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
