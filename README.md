@@ -86,7 +86,7 @@ Error Messages
 }
 ```
 
-###A PI Notifications
+### API Notifications
 
 API notifications provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / API / Notifications.
 
