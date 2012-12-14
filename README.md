@@ -42,8 +42,8 @@ Please see our SDK's or support libraries for OAuth2 in your preferred environme
 
 Every Checkfront account operates in their own segregated environment, secure by a unique domain. In most cases, this is : https://your-company.checkfront.com. In this document this will be referred to as your Checkfront URL or your-company.checkfront.com (this may differ depending on your country).
 
-https://your-company.checkfront.com/api/2.1/
-https://your-company.checkfront.com/oauth/
+* https://your-company.checkfront.com/api/2.1/
+* https://your-company.checkfront.com/oauth/
 
 ### Response Formatting (JSON)
 
