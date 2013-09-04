@@ -1,10 +1,10 @@
 <?php
 	date_default_timezone_set('GMT');
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/db.class.php");
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/notifications.class.php");
+	require_once '../includes/db.class.php';
+	require_once '../includes/notifications.class.php';
 
 
-# COMMENTED CODE WAS USED TO WRITE TO A FILE, BEFORE DATABASE WAS SETUP
+# COMMENTED CODE IS USED TO WRITE TO A FILE, GOOD FOR DEBUGGING
 
 
 ##$fh = fopen('json_parse.log', 'a+') or die("Error opening output file");
