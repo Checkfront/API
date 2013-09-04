@@ -9,6 +9,22 @@ Logging the notifications sent from Checkfront to guests… So, the process can 
 class Notification 
 {
 
+	public $host;
+	public $status;
+	public $code;
+	public $email_date;
+	public $created_date;
+	public $staff_id;
+	public $source_ip;
+	public $start_date;
+	public $end_date;
+	public $name;
+	public $email;
+	public $region;
+	public $address;
+	public $country;
+	public $postal_zip;
+
 	public $data;
 	public $dataArray;
 
@@ -25,7 +41,7 @@ class Notification
 		$email_date		= date('Y-m-d H:i:s');
 		$created_date	= $this->data->booking->created_date;
 		$staff_id		= $this->data->booking->staff_id;
-		$source_ip		= ip2long($this->data->booking->source_ip);
+		$source_ip		= sprintf('%u', ip2long($this->data->booking->source_ip));
 		$start_date		= $this->data->booking->start_date;
 		$end_date		= $this->data->booking->end_date;
 		$name			= $this->data->booking->customer->name;

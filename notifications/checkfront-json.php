@@ -26,7 +26,7 @@
 #	    fclose($fh);
 		
 	} else {
-		echo "Invalid Host";
+		error_log("Invalid Host", 0);
 	}
 #}
 

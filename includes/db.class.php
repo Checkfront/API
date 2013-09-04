@@ -9,11 +9,6 @@ Classes for database interaction
 class DB 
 {
 
-	/**
-	 * Do we want to error_log() all SQL queries?
-	 */
-	const DEBUG_SQL_MODE = true;
-
 	private $host;
 	private $username;
 	private $password;
@@ -30,8 +25,8 @@ class DB
 	    $this->mysqli = new mysqli($this->host, $this->username, $this->password, $this->database);
 	
 	    if (mysqli_connect_errno()) {
-	            printf("Connect failed: %s\n", mysqli_connect_error());
-	            exit();
+	    		error_log("DB connection failed: " . mysqli_connect_error());
+	    		exit();
 	    }
 	}
 
@@ -57,11 +52,9 @@ class DB
 			
 	    $fields = implode(',' , array_keys($data));
 	    $values = "'" . implode("','" , array_values($data)) . "'";
-	    
-	    //Final query	
 	    $q = "INSERT INTO {$table} ($fields) VALUES ($values)";
-		if (self::DEBUG_SQL_MODE == true) { error_log($q, E_NOTICE); }
-	    return $this->mysqli->query($q);
+		if (!$this->mysqli->query($q)) error_log("Error: " . $this->mysqli->error);
+		else return true;
 	}
 
 
