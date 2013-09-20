@@ -127,7 +127,7 @@ https://your-company.checkfront.com/oauth/
 
 <p>Our SDKs (software development kit) handles most of the complex authentication (OAuth2) issues involved with consuming the Checkfront API. They also include sample code and additional documentation and up and running with the API in no time.</p>
 
-<p>All of our SDKs are open source and are <a href="https://github.com/Checkfront">available on Github</a>.  If you have a module to contribute, please let us know.</p>
+<p>All of our SDKs are open source and are <a href="https://github.com/Checkfront">available on Github</a>.  If you have a module to contribute, please issue a pull request and we will review.</p>
 
 <h3>Terms of Use</h3>
 
@@ -496,11 +496,20 @@ https://your-company.checkfront.com/oauth/
 <th>[options]</th>
 <td>Array: transactions, notes - options[transactions]=1.</td>
 </tr>
-</table><p>You can filter bookings based on the available arguments, or fetch a single booking by supplying the booking_id in the path of the API call.  If a single booking is requested, the response is returned in a single "booking" array.  If multiple items are requested, the response is in a "bookings" array.</p>
+</table><p>You can filter bookings based on the available arguments, or fetch a single booking by supplying the booking_id in the path of the API call.  If a single booking is requested, the response is returned in a single "booking" array.  If multiple items are requested, the response is in a "bookings" array. Currently this is the only way to grab bookings. By using the notifcation API you can create a table of new bookings to obtain the booking_id.</p>
 
 <h3>Date Range</h3>
 
-<p>If selecting bookings based on a date range, both the start date and end dates are required.  The dates are specific to the start and end date of items in the booking. A booking contain items in the invoice not in the time range if other items match.</p>
+<p>If selecting bookings based on a date range, both the start date and end dates are required.  The dates are specific to the start and end date of items in the booking. A booking can contain items in the invoice not in the time range if other items match.</p>
+
+
+<p>Here is an example of requesting a range of booking via the API. At this time this does not work.</p>
+<pre><code>$data = $Checkfront->get('booking/journal',array(
+                   'start_date'=>'2013-01-10',
+                   'end_date'=>date('Y-m-d',strtotime('+30 days')))
+);
+print_r($data);
+</code></pre>
 
 <hr><h1>Customers</h1>
 
