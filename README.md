@@ -1,4 +1,6 @@
-![Checkfront API](https://www.checkfront.com/images/brand/Checkfront-Logo-45.png)
+<img src="https://www.checkfront.com/images/logo/Checkfront-80.png" height="40" alt="Checkfront" />
+
+If you are developing on our v3 platform see our [v3 API](https://github.com/Checkfront/API/tree/v3)
 
 # Checkfront API
 
