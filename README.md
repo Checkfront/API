@@ -6,11 +6,11 @@
 
 ## Changes from v2
 
-There have been several changes in the v3.0 api that could impact some integrations.  
+There have been several changes in the v3.0 api that could impact some integrations.  Please review them here and update / test your project before switching to the v3 endpoint/
 
 ### Token Pair Authentication
 
-It's now possible to skip the OAuth2 process by using a token pair for authentication.  The token pair can be generated in the API setup page.
+It's now possible to bypass the OAuth2 process by using a token pair for authentication.  The token pair can be generated in the API setup page.
 
 ### New resources
 
@@ -31,6 +31,7 @@ It's now possible to skip the OAuth2 process by using a token pair for authentic
 - Developer console added to platform to aid in development and testing API calls.
 - The booking token is now returned on booking/create
 - Required fields are listed in the error message on booking/create.
+
 
 ---
 
@@ -54,25 +55,30 @@ This document assumes you have some knowledge of programming, and API implementa
 
 Some functionality documented here may not be available to you based on your plan, or access level of your account.  
 
+
 ## REST Interface
 
 The Checkfront API uses a REST interface. This means that method calls are made over the Internet by sending standard HTTPs GET or POST requests to the Checkfront API REST server.
 
 Nearly any computer language can be used to communicate over HTTP with the REST server including remote web sites, mobile devices and desktop applications.
 
+
 ## Authentication and Encryption 
 
 You can connect to the API using a static token pair or by way of OAuth2.  A static token can be used for server to server enviorments.
 
+
+Every Checkfront account operates in their own segregated environment, secure by a unique domain. In most cases, this is : https://your-company.checkfront.com. In this document this will be referred to as your Checkfront URL or your-company.checkfront.com (this may differ depending on your country).
+
 ### Token Pair ###
 
-Token pairs are static and do not need to be refreshed.  Use this in server to server integrations where the route to the API is trusted.
+Unline OAuth2, token pairs are static and do not need to be refreshed.  Use this in server to server integrations where the route to the API is trusted.
 
 All token authenticated queries to the API are required to be made over a SSL.
 
 Token Pairs are sent over basic auth.  The API Key is used as the User, and the API Secret is used for the Password.
 
-*Token Pair Endpoint*
+**Token Pair Endpoint**
 
     https://your-company.checkfront.com/api/3.0/
 
@@ -86,9 +92,7 @@ If your app isn't going to be distributed outside of your organization, you can 
 
 Please see our SDK's or support libraries for OAuth2 in your preferred environment.
 
-*OAuth2 Endpoints*
-
-Every Checkfront account operates in their own segregated environment, secure by a unique domain. In most cases, this is : https://your-company.checkfront.com. In this document this will be referred to as your Checkfront URL or your-company.checkfront.com (this may differ depending on your country).
+**OAuth2 Endpoints**
 
     https://your-company.checkfront.com/api/3.0/
 	https://your-company.checkfront.com/oauth/
@@ -100,7 +104,7 @@ If using OAuth2 access tokens will expire in 7 days.  You need to check the stat
 
 ### Response Formatting (JSON)
 
-All response is formatted in JSON (JavaScript Object Notation).All modern languages are able to quickly parse JSON. See: PHP: json_decode, Ruby: JSON.parse, .Net Json.NET, Javascript / jQuery: jQuery.getJSON.
+All response is formatted in JSON (JavaScript object Notation).All modern languages are able to quickly parse JSON. See: PHP: json_decode, Ruby: JSON.parse, .Net Json.NET, Javascript / jQuery: jQuery.getJSON.
 
 ### Representation
 
@@ -116,6 +120,7 @@ All response is formatted in JSON (JavaScript Object Notation).All modern langua
 API throttle limit: We reserve the right to tune the limitations, but they are always set high enough to allow a well-behaving interactive program to do its job.
 
 When the rate limit is exceeded Checkfront will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 3.06.
+
 
 ## API Request
 
@@ -145,7 +150,7 @@ Error Messages
 
 ### API Webhooks
 
-API webooks  provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / Developer / Webhooks.
+API webooks provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / Developer / Webhooks.
 
 ### Sample Code
 
@@ -165,34 +170,34 @@ The developer console is a new tool added to the platfrom to aid in development 
 
 # Checkfront API Resources
 
-API Resources provide read and write access to Checkfront data sets. You can access Checkfront objects through standard the REST interface.
+API Resources provide read and write access to Checkfront data sets. You can access Checkfront resources through standard the REST interface.
 
 API Resources currently include: Inventory, Booking and Customer.  You can see the full list by  calling /api/3.0/help
 
 # Inventory
 
-The inventory object provides access to your master inventory. This allows you to query items, determine availability and pricing for a given period. The information returned can be used to create a booking in the system.
+The inventory resources provides access to your master inventory. This allows you to query items, determine availability and pricing for a given period. The information returned can be used to create a booking in the system.
 
 ##Categories
 
-Items are organized by categories in the system.  A full list of available categories can be retrived via the category object. 
+Items are organized by categories in the system.  A full list of available categories can be retrieved via the category resources. 
 
 <table>
 <tbody>
 <tr>
-<th>Description:</th>
+<th><b>Description:</b></td>
 <td>Fetch list of categories</td>
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/2/category/</td>
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th>[category_id]</th>
+<th><b>[category_id]</b></td>
 <td>Integer: optional category to return.</td>
 </tr>
 </tbody>
@@ -201,57 +206,57 @@ Items are organized by categories in the system.  A full list of available categ
 
 ## Items
 
-You can query a list of available items based on search critera supplied in the API call.
+You can query a list of available items based on search criteria supplied in the API call.
 
-When no dates are passed in the API call, a full list of enabled items in the inventory.  When a date is passed, the API will return a "**rated**" response that includes pricing and availablity. 
+When no dates are passed in the API call, a full list of enabled items in the inventory.  When a date is passed, the API will return a "**rated**" response that includes pricing and availability. 
 
 <table>
 <tbody>
 <tr>
-<th>Description:</th>
+<th><b>Description:</b></td>
 <td>Query items, optionally return pricing and availability.</td>
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/item/</td>
 </tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/item/<b>item_id</b> (single item)</td>
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th>[start_date]</th>
+<th><b>[start_date]</b></td>
 <td>Date: Start date.</td>
 </tr>
 <tr>
-<th>[end_date]</th>
+<th><b>[end_date]</b></td>
 <td>Date: End date.</td>
 </tr>
 <tr>
-<th>[start_time]</th>
+<th><b>[start_time]</b></td>
 <td>Time: Start time (used in hourly bookings).</td>
 </tr>
 <tr>
-<th>[end_time]</th>
+<th><b>[end_time]</b></td>
 <td>Time: End time (used in hourly bookings).</td>
 </tr>
 <tr>
-<th>[category_id]</td>
+<th><b>[category_id]</td>
 <td>Integer: Filter items by category.</td>
 </tr>
 <tr>
-<th>[discount_code]</th>
+<th><b>[discount_code]</b></td>
 <td>String: discount or voucher code to be used.</td>
 </tr>
 <tr>
-<th>[rules]</th>
+<th><b>[rules]</b></td>
 <td>String: supply 'soft' to not trigger date based rule errors.</td>
 </tr>
 <tr>
-<th>[param]</td>
+<th><b>[param]</td>
 <td>Array: See - Booking parameters below.</td>
 </tr>
 </tbody>
@@ -271,7 +276,7 @@ Booking parameters have many options, and can be configured to control inventory
 
 ### Item details
 
-To get detailed pricing and availbility on a specific item, supply the item_id in the API call **path** along with a date filter paramaters.  For example, to get item 19:
+To get detailed pricing and availability on a specific item, supply the item_id in the API call **path** along with a date filter parameters.  For example, to get item 19:
 
 	GET /api/3.0/item/19/?start_date=3.031230&end_date=3.031230&end_date=3.031230
 
@@ -284,7 +289,7 @@ The item SLIP is a string returned when making a rated query to a specific item.
 
 # Booking
 
-The booking object can be used in conduction with the item object to create a new booking on the system.
+The booking resources can be used in conduction with the item resources to create a new booking on the system.
 
 ##Sessions
 
@@ -295,14 +300,14 @@ To start a new session, you must have the booking SLIP returned when querying it
 Description:|Set or update a booking session.
 
 <table>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/session</td>
 </tr>
-<tr><th>Methods:</th>
+<tr><th><b>Methods:</b></td>
 <td>GET, POST</td></tr>
-<tr><th>[session_id]</th>
+<tr><th><b>[session_id]</b></td>
 <td>String: system generated session id.</td></tr>
-<tr><th>[slip]</th>
+<tr><th><b>[slip]</b></td>
 <td>String: system generated SLIP from rated Item query.</td></tr>
 </tbody>
 </table> 
@@ -333,7 +338,7 @@ Description:|Set or update a booking session.
 
 ### Add more items to a session
 
-Depending on your platform or SDK, the session can be passed in the form of a cookie or in the query string.  For the sake of documenation we'll pass it in the query string.  
+Depending on your platform or SDK, the session can be passed in the form of a cookie or in the query string.  For the sake of documentation we'll pass it in the query string.  
  
 	GET /api/3.0/session?slip=3.3.030303X1-guests.1&session_id=rtdv4osethqurlmqgi55mcrkm4
 	
@@ -345,7 +350,7 @@ If you wish to add multiple items at once, you can supply the SLIP in the form o
 
 ### Getting session details
 
-You can fetch the details of the purposed booking by accessing the session object.  The item details will be returned with any request to the booking session.
+You can fetch the details of the purposed booking by accessing the session resource.  The item details will be returned with any request to the booking session.
 
  
 	GET /api/3.0/session?session_id=rtdv4osethqurlmqgi55mcrkm4
@@ -359,12 +364,12 @@ When the required items are added to your booking session, you can create the bo
 ### Booking Fields
 New bookings require customer information, and other fields as defined by your system configuration.
 
-You can dynamically fetch the fields required to complete the booking by calling the booking/form object along with the session, before calling booking/create.
+You can dynamically fetch the fields required to complete the booking by calling the booking/form resource along with the session, before calling booking/create.
 
 <table>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Fetch Booking Fields.</td></tr>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/form</td></tr>
 </tbody>
 </table>
@@ -373,19 +378,19 @@ This returns an array of fields and their properties that need to be used when c
 
 ### Booking Create
 
-To create a booking, submit the fields from the booking/form object along with the session id.  
+To create a booking, submit the fields from the booking/form resource along with the session id.  
 
 <table>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Create a booking.</td></tr>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/create</td></tr>
-<tr><th>Methods:</th>
+<tr><th><b>Methods:</b></td>
 <td>POST</td></tr>
 <tr>
-<th>[session_id]</th><td>String: system generate session_id</td></tr>
+<th><b>[session_id]</b></td><td>String: system generate session_id</td></tr>
 </tr>
-<tr><th>[fields]</th><td>Array: populated fields in a name value pair array from the booking/fields call.</td></tr>
+<tr><th><b>[fields]</b></td><td>Array: populated fields in a name value pair array from the booking/fields call.</td></tr>
 </tr>
 </tbody>
 </table>
@@ -401,21 +406,21 @@ You can check-in, and checkout a booking.  By default, a note is created under t
 
 <table>
 <tbody>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Check-in a booking.</td></tr>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkin</td></tr>
-<tr><th>Methods:</th>
+<tr><th><b>Methods:</b></td>
 <td>POST</td></tr>
 </tbody>
 </table> 
 
 <table>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Check-out a booking.</td></tr>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkout</td></tr>
-<tr><th>Methods:</th>
+<tr><th><b>Methods:</b></td>
 <td>POST</td></tr>
 </table> 
 
@@ -430,15 +435,15 @@ This is only available if acting under and account_id.
 <table>
 <tbody>
 <tr>
-<th>Description:</th>
+<th><b>Description:</b></td>
 <td>Check-out a booking.</td>
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkout</td>
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>POST</td>
 </tr>
 </tbody>
@@ -451,41 +456,41 @@ Notes can be added to bookings.  By default the authenticated account will be us
 	POST /api/3.0/booking/DZYR-250114/note
 
 <table>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Check-out a booking.</td></tr>
-<tr><th>Path:</th>
+<tr><th><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/note</td></tr>
 <tr>
-<th>Methods:</th><td>POST</td>
+<th><b>Methods:</b></td><td>POST</td>
 </tr>
 <tr>
-<th>[body]</th>
+<th><b>[body]</b></td>
 <td>String: body of the note.  Upto 3000 chars.</td>
 </tr>
 </tbody>
 </table> 
 
 ## Status
-The status of an existing booking can be modified using the booking/status object.
+The status of an existing booking can be modified using the booking/status resource.
 
 	POST /api/3.0/booking/DZYR-250114/status
 
 <table>
 <tbody>
 <tr>
-<th>Description:</th>
+<th><b>Description:</b></td>
 <td>Change booking status.</td>
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/status</td>
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>POST</td>
 </tr>
 <tr>
-<th>[status_id]</th>
+<th><b>[status_id]</b></td>
 <td>String: new booking status.</td>
 </tr>
 </tbody>
@@ -499,35 +504,35 @@ The booking journal provides access to existing bookings in the system.  You can
 <table>
 <tbody>
 <tr>
-<th>Description:</th>
+<th><b>Description:</b></td>
 <td>Fetch details on a booking.</td>
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/booking/journal/
 </tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/booking/journal/UJII-3.031230 (single item)
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th>[customer_id]</th>
+<th><b>[customer_id]</b></td>
 <td>String: customer id filter.</td>
 </tr>
 <tr>
-<th>[start_date]</th>
+<th><b>[start_date]</b></td>
 <td>Date: start date range.</td>
 </tr>
 <tr>
-<th>[end_date]</th>
+<th><b>[end_date]</b></td>
 <td>Date: end date.</td>
 </tr>
 <tr>
-<th>[options]</th>
+<th><b>[options]</b></td>
 <td>Array: transactions, notes - options[transactions]=1.</td>
 </tr>
 </table> 
@@ -541,7 +546,7 @@ If selecting bookings based on a date range, both the start date and end dates a
 
 # Customers
 
-The customer object provides access to customers in the system. Customers are created when a booking is made.  
+The customer resource provides access to customers in the system. Customers are created when a booking is made.  
 
 There is currently no way to create customers via the API, outside of creating a booking. 
 
@@ -550,25 +555,25 @@ There is currently no way to create customers via the API, outside of creating a
 You can query customers based on indexed fields, including email address, name and customer id.
 
 <table>
-<tr><th>Description:</th>
+<tr><th><b>Description:</b></td>
 <td>Query customer records</td></tr>
-<tr><th>Path:</th><td>/api/3.0/customer/</td></tr>
+<tr><th><b>Path:</b></td><td>/api/3.0/customer/</td></tr>
 <tr>
-<th>Path:</th>
+<th><b>Path:</b></td>
 <td>/api/3.0/customer/XX5-037-755 (single record)</td>
 </tr>
 <tr>
-<th>Methods:</th>
+<th><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th>[customer_email]</th>
+<th><b>[customer_email]</b></td>
 <td>String: a unique customer e-mail address.</td>
 </tr>
 <tr>
-<th>[customer_id]</th><td>String: a unique customer id.</td></tr>
+<th><b>[customer_id]</b></td><td>String: a unique customer id.</td></tr>
 <tr>
-<th>[options]</th><td>Array: optional return formatting.  Currently: bookings=1 also includes bookings made by the customer.</td></tr>
+<th><b>[options]</b></td><td>Array: optional return formatting.  Currently: bookings=1 also includes bookings made by the customer.</td></tr>
 </table>
 
 	GET /api/3.0/customer/?customer_email=test@checkfront.com&options[bookings]=1
