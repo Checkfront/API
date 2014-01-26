@@ -185,19 +185,19 @@ Items are organized by categories in the system.  A full list of available categ
 <table>
 <tbody>
 <tr>
-<th><b>Description:</b></td>
+<td><b>Description:</b></td>
 <td>Fetch list of categories</td>
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/2/category/</td>
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th><b>[category_id]</b></td>
+<td><b>[category_id]</b></td>
 <td>Integer: optional category to return.</td>
 </tr>
 </tbody>
@@ -213,50 +213,50 @@ When no dates are passed in the API call, a full list of enabled items in the in
 <table>
 <tbody>
 <tr>
-<th><b>Description:</b></td>
+<td><b>Description:</b></td>
 <td>Query items, optionally return pricing and availability.</td>
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/item/</td>
 </tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/item/<b>item_id</b> (single item)</td>
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th><b>[start_date]</b></td>
+<td><b>[start_date]</b></td>
 <td>Date: Start date.</td>
 </tr>
 <tr>
-<th><b>[end_date]</b></td>
+<td><b>[end_date]</b></td>
 <td>Date: End date.</td>
 </tr>
 <tr>
-<th><b>[start_time]</b></td>
+<td><b>[start_time]</b></td>
 <td>Time: Start time (used in hourly bookings).</td>
 </tr>
 <tr>
-<th><b>[end_time]</b></td>
+<td><b>[end_time]</b></td>
 <td>Time: End time (used in hourly bookings).</td>
 </tr>
 <tr>
-<th><b>[category_id]</td>
+<td><b>[category_id]</td>
 <td>Integer: Filter items by category.</td>
 </tr>
 <tr>
-<th><b>[discount_code]</b></td>
+<td><b>[discount_code]</b></td>
 <td>String: discount or voucher code to be used.</td>
 </tr>
 <tr>
-<th><b>[rules]</b></td>
+<td><b>[rules]</b></td>
 <td>String: supply 'soft' to not trigger date based rule errors.</td>
 </tr>
 <tr>
-<th><b>[param]</td>
+<td><b>[param]</td>
 <td>Array: See - Booking parameters below.</td>
 </tr>
 </tbody>
@@ -300,14 +300,14 @@ To start a new session, you must have the booking SLIP returned when querying it
 Description:|Set or update a booking session.
 
 <table>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/session</td>
 </tr>
-<tr><th><b>Methods:</b></td>
+<tr><td><b>Methods:</b></td>
 <td>GET, POST</td></tr>
-<tr><th><b>[session_id]</b></td>
+<tr><td><b>[session_id]</b></td>
 <td>String: system generated session id.</td></tr>
-<tr><th><b>[slip]</b></td>
+<tr><td><b>[slip]</b></td>
 <td>String: system generated SLIP from rated Item query.</td></tr>
 </tbody>
 </table> 
@@ -367,9 +367,9 @@ New bookings require customer information, and other fields as defined by your s
 You can dynamically fetch the fields required to complete the booking by calling the booking/form resource along with the session, before calling booking/create.
 
 <table>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Fetch Booking Fields.</td></tr>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/form</td></tr>
 </tbody>
 </table>
@@ -381,16 +381,16 @@ This returns an array of fields and their properties that need to be used when c
 To create a booking, submit the fields from the booking/form resource along with the session id.  
 
 <table>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Create a booking.</td></tr>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/create</td></tr>
-<tr><th><b>Methods:</b></td>
+<tr><td><b>Methods:</b></td>
 <td>POST</td></tr>
 <tr>
-<th><b>[session_id]</b></td><td>String: system generate session_id</td></tr>
+<td><b>[session_id]</b></td><td>String: system generate session_id</td></tr>
 </tr>
-<tr><th><b>[fields]</b></td><td>Array: populated fields in a name value pair array from the booking/fields call.</td></tr>
+<tr><td><b>[fields]</b></td><td>Array: populated fields in a name value pair array from the booking/fields call.</td></tr>
 </tr>
 </tbody>
 </table>
@@ -406,21 +406,21 @@ You can check-in, and checkout a booking.  By default, a note is created under t
 
 <table>
 <tbody>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Check-in a booking.</td></tr>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkin</td></tr>
-<tr><th><b>Methods:</b></td>
+<tr><td><b>Methods:</b></td>
 <td>POST</td></tr>
 </tbody>
 </table> 
 
 <table>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Check-out a booking.</td></tr>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkout</td></tr>
-<tr><th><b>Methods:</b></td>
+<tr><td><b>Methods:</b></td>
 <td>POST</td></tr>
 </table> 
 
@@ -435,15 +435,15 @@ This is only available if acting under and account_id.
 <table>
 <tbody>
 <tr>
-<th><b>Description:</b></td>
+<td><b>Description:</b></td>
 <td>Check-out a booking.</td>
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/checkout</td>
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>POST</td>
 </tr>
 </tbody>
@@ -456,15 +456,15 @@ Notes can be added to bookings.  By default the authenticated account will be us
 	POST /api/3.0/booking/DZYR-250114/note
 
 <table>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Check-out a booking.</td></tr>
-<tr><th><b>Path:</b></td>
+<tr><td><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/note</td></tr>
 <tr>
-<th><b>Methods:</b></td><td>POST</td>
+<td><b>Methods:</b></td><td>POST</td>
 </tr>
 <tr>
-<th><b>[body]</b></td>
+<td><b>[body]</b></td>
 <td>String: body of the note.  Upto 3000 chars.</td>
 </tr>
 </tbody>
@@ -478,19 +478,19 @@ The status of an existing booking can be modified using the booking/status resou
 <table>
 <tbody>
 <tr>
-<th><b>Description:</b></td>
+<td><b>Description:</b></td>
 <td>Change booking status.</td>
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/booking/<b>booking_id</b>/status</td>
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>POST</td>
 </tr>
 <tr>
-<th><b>[status_id]</b></td>
+<td><b>[status_id]</b></td>
 <td>String: new booking status.</td>
 </tr>
 </tbody>
@@ -504,35 +504,35 @@ The booking journal provides access to existing bookings in the system.  You can
 <table>
 <tbody>
 <tr>
-<th><b>Description:</b></td>
+<td><b>Description:</b></td>
 <td>Fetch details on a booking.</td>
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/booking/journal/
 </tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/booking/journal/UJII-3.031230 (single item)
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th><b>[customer_id]</b></td>
+<td><b>[customer_id]</b></td>
 <td>String: customer id filter.</td>
 </tr>
 <tr>
-<th><b>[start_date]</b></td>
+<td><b>[start_date]</b></td>
 <td>Date: start date range.</td>
 </tr>
 <tr>
-<th><b>[end_date]</b></td>
+<td><b>[end_date]</b></td>
 <td>Date: end date.</td>
 </tr>
 <tr>
-<th><b>[options]</b></td>
+<td><b>[options]</b></td>
 <td>Array: transactions, notes - options[transactions]=1.</td>
 </tr>
 </table> 
@@ -555,25 +555,25 @@ There is currently no way to create customers via the API, outside of creating a
 You can query customers based on indexed fields, including email address, name and customer id.
 
 <table>
-<tr><th><b>Description:</b></td>
+<tr><td><b>Description:</b></td>
 <td>Query customer records</td></tr>
-<tr><th><b>Path:</b></td><td>/api/3.0/customer/</td></tr>
+<tr><td><b>Path:</b></td><td>/api/3.0/customer/</td></tr>
 <tr>
-<th><b>Path:</b></td>
+<td><b>Path:</b></td>
 <td>/api/3.0/customer/XX5-037-755 (single record)</td>
 </tr>
 <tr>
-<th><b>Methods:</b></td>
+<td><b>Methods:</b></td>
 <td>GET</td>
 </tr>
 <tr>
-<th><b>[customer_email]</b></td>
+<td><b>[customer_email]</b></td>
 <td>String: a unique customer e-mail address.</td>
 </tr>
 <tr>
-<th><b>[customer_id]</b></td><td>String: a unique customer id.</td></tr>
+<td><b>[customer_id]</b></td><td>String: a unique customer id.</td></tr>
 <tr>
-<th><b>[options]</b></td><td>Array: optional return formatting.  Currently: bookings=1 also includes bookings made by the customer.</td></tr>
+<td><b>[options]</b></td><td>Array: optional return formatting.  Currently: bookings=1 also includes bookings made by the customer.</td></tr>
 </table>
 
 	GET /api/3.0/customer/?customer_email=test@checkfront.com&options[bookings]=1
