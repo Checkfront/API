@@ -1,8 +1,36 @@
-![Checkfront API](https://www.checkfront.com/images/brand/Checkfront-Logo-45.png)
+![Checkfront API](https://www.checkfront.com/images/logo/Checkfront-80.png =x40)
 
-# Checkfront API
+# Checkfront API v3.0
 
-*version 2.1*
+**The v3.0 API and documenation is a work in progress.  Not currently available for production.**
+
+## Changes from v2
+
+There have been several changes in the v3.0 api that could impact some integrations.  
+
+### Token Pair Authentication
+
+It's now possible to skip the OAuth2 process by using a token pair for authentication.  The token pair can be generated in the API setup page.
+
+### New resources
+
+- /api/3.0/ping - gets the status of the API.  
+- /api/3.0/help - lists avalaible resources.
+- /booking/{$ID}/invoice - fetchings the booking invoice.
+
+
+### Deprecated
+
+- /booking/journal - now lives under /booking
+
+
+### Other changes
+
+- The HTTP_X_ON_BEHALF is always respected when interacting with the API.  This can be passed to change the user the request is acting under.  To act on behalf of a customer / external source you can set this to "off".
+- The API provider if supplied is now shown on the booking invoice footer.
+- Developer console added to platform to aid in development and testing API calls.
+- The booking token is now returned on booking/create
+- Required fields are listed in the error message on booking/create.
 
 ---
 
@@ -15,8 +43,10 @@ The Checkfront API extends the following functionality:
 * Query inventory availability.
 * Get date based rate and pricing information.
 * Create a new booking.
+* Fetch invoice details.
 * Update an existing booking.
 * Retrieve customer information.
+
 
 ### Prerequisites:
 
@@ -30,9 +60,25 @@ The Checkfront API uses a REST interface. This means that method calls are made 
 
 Nearly any computer language can be used to communicate over HTTP with the REST server including remote web sites, mobile devices and desktop applications.
 
-## Authentication and Encryption (OAuth2)
+## Authentication and Encryption 
 
-Checkfront makes use of the open standard OAuth2 to provide secure and transparent authentication with the API. OAuth allows you to make your Checkfront account available to external applications without needing to provide your login and password.
+You can connect to the API using a static token pair or by way of OAuth2.  A static token can be used for server to server enviorments.
+
+### Token Pair ###
+
+Token pairs are static and do not need to be refreshed.  Use this in server to server integrations where the route to the API is trusted.
+
+All token authenticated queries to the API are required to be made over a SSL.
+
+Token Pairs are sent over basic auth.  The API Key is used as the User, and the API Secret is used for the Password.
+
+*Token Pair Endpoint*
+
+    https://your-company.checkfront.com/api/3.0/
+
+###OAuth2###
+
+OAuth2 to provides secure and transparent authentication with the API. OAuth allows you to make your Checkfront account available to external applications without needing to provide your login and password.  Use this where the route to the endpoint can change or is unknown, for example desktop and mobile apps.
 
 All queries to the API are required to be made over a SSL authenticated OAuth2 session. Checkfront currently supports Draft 20 of the OAuth2 spec. For those switching from OAuth1, you'll notice it's significantly easier to work with, and generally performs better.
 
@@ -40,12 +86,17 @@ If your app isn't going to be distributed outside of your organization, you can 
 
 Please see our SDK's or support libraries for OAuth2 in your preferred environment.
 
-### Endpoints
+*OAuth2 Endpoints*
 
 Every Checkfront account operates in their own segregated environment, secure by a unique domain. In most cases, this is : https://your-company.checkfront.com. In this document this will be referred to as your Checkfront URL or your-company.checkfront.com (this may differ depending on your country).
 
-    https://your-company.checkfront.com/api/2.1/
+    https://your-company.checkfront.com/api/3.0/
 	https://your-company.checkfront.com/oauth/
+
+#### Refreshing Tokens ####
+
+If using OAuth2 access tokens will expire in 7 days.  You need to check the status of the token and use the refresh token to refresh it.  Most OAuth2 libraries have this function built it.
+
 
 ### Response Formatting (JSON)
 
@@ -54,26 +105,27 @@ All response is formatted in JSON (JavaScript Object Notation).All modern langua
 ### Representation
 
 * All JSON should be UTF-8 encoded.
-* Date and time values ISO 8601 formatted, eg: YYYY-MM-DD, HH:MM:SS.
+* Date and time values ISO 8601 formatted, eg: YYYY-MM-DD, HH:MM:SS or as unix time stamp.
 * Dates are specified in the timezone configured in the account unless otherwise noted.
 * Booleans are either 1 (true) or 0 (false).
-* Currency values are decimal formatted, e.g: 119.20.
+* Currency values are decimal formatted, e.g: 119.20.  Summary currencies will be formatted as per the local.  Eg: €119.20.
+
 
 ## General Housekeeping
 
 API throttle limit: We reserve the right to tune the limitations, but they are always set high enough to allow a well-behaving interactive program to do its job.
 
-When the rate limit is exceeded Checkfront will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 2616.
+When the rate limit is exceeded Checkfront will send an HTTP 503 status code. The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 3.06.
 
 ## API Request
 
 Once authenticated, a basic request to the API will return some general information about the account you are connecting to. This header information is included in all successful calls to the API, but may be left out of examples in this document.
 
-	GET: http://demo.checkfront.com/api/2.1/
+	GET: http://demo.checkfront.com/api/3.0/
 
 ```json
 {
-    "version":"2.1",
+    "version":"3.0",
     "id":"demo.checkfront.com",
     "name":"Demo",
     "currency_id":"USD",
@@ -91,9 +143,9 @@ Error Messages
 }
 ```
 
-### API Notifications
+### API Webhooks
 
-API notifications provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / API / Notifications.
+API webooks  provide the ability to send an automated notification when a new booking is created or updated. You can configure API notifications in your account under Manage / Developer / Webhooks.
 
 ### Sample Code
 
@@ -105,14 +157,17 @@ All of our SDKs are open source and are [available on Github](https://github.com
 
 Use of this API is strictly bound by the terms as specified in [Checkfront API Terms of Service](http://www.checkfront.com/terms/#api).
 
+## Developer Console ##
+
+The developer console is a new tool added to the platfrom to aid in development and testing of Checkfront integrations.  It's available under Manage / Developer / Console.  From here you can issue direct requests to the API making use of all the resources documented here.
 
 ---
 
-# Checkfront API Objects
+# Checkfront API Resources
 
-API Objects provide read and write access to Checkfront data sets. You can access Checkfront objects through standard the REST interface.
+API Resources provide read and write access to Checkfront data sets. You can access Checkfront objects through standard the REST interface.
 
-API Objects currently include: Inventory, Booking and Customer.
+API Resources currently include: Inventory, Booking and Customer.  You can see the full list by  calling /api/3.0/help
 
 # Inventory
 
@@ -158,10 +213,10 @@ When no dates are passed in the API call, a full list of enabled items in the in
 </tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/item/</td>
+<td>/api/3.0/item/</td>
 </tr>
 <th>Path:</th>
-<td>/api/2.1/item/<b>item_id</b> (single item)</td>
+<td>/api/3.0/item/<b>item_id</b> (single item)</td>
 </tr>
 <tr>
 <th>Methods:</th>
@@ -210,15 +265,15 @@ To query specific pricing an availability you need to pass the appropriate param
 
 Let's say for instance you have 2 parameters configured.  Adults (id: adults), Children (id: children).  To get pricing for 2 a adults and one child you would pass: **param[adults]=2&param[children]=1** in your API call.
 
-	GET /api/2.1/item/19start_date=20131230&end_date=20131230&end_date=20131230&param[adults]=2&param[children]=1
+	GET /api/3.0/item/19start_date=3.031230&end_date=3.031230&end_date=3.031230&param[adults]=2&param[children]=1
 
 Booking parameters have many options, and can be configured to control inventory in very specific ways.  See the Checkfront support centre for more information.
 
 ### Item details
 
-To get detailed pricing and availbility on a specific item, supply the item_id in the API call **path** along with any of the filter paramaters.  For example, to get item 19:
+To get detailed pricing and availbility on a specific item, supply the item_id in the API call **path** along with a date filter paramaters.  For example, to get item 19:
 
-	GET /api/2.1/item/19/?start_date=20131230&end_date=20131230&end_date=20131230
+	GET /api/3.0/item/19/?start_date=3.031230&end_date=3.031230&end_date=3.031230
 
 
 ## SLIP
@@ -241,7 +296,7 @@ Description:|Set or update a booking session.
 
 <table>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/session</td>
+<td>/api/3.0/booking/session</td>
 </tr>
 <tr><th>Methods:</th>
 <td>GET, POST</td></tr>
@@ -253,12 +308,12 @@ Description:|Set or update a booking session.
 </table> 
 
 ### Create a new session
-	POST /api/2.1/session?slip=3.20130303X1-guests.1
+	POST /api/3.0/session?slip=3.3.030303X1-guests.1
 
 
 ```json
 {
-"version": "2.1",
+"version": "3.0",
 "host_id": "demo.checkfront.com",
 "name": "My Company",
 "request": {
@@ -270,30 +325,31 @@ Description:|Set or update a booking session.
 "session": {
 "id": "rtdv4osethqurlmqgi55mcrkm4",
 "slip": {
-"1": "3.20130303X1-guests.1",
+"1": "3.3.030303X1-guests.1",
 }
 },
 ```
-
-### Getting session details
-
-You can fetch the details of the purposed booking by accessing the session object.  The item details will be returned with any request to the booking session.
-
- 
-	GET /api/2.1/session?slip=3.20130303X1-guests.1
-	
-
-If you wish to add multiple items at once, you can supply the SLIP in the form of an array.
- 
-
-	GET /api/2.1/session?slip=[]3.20130303X1-guests.1&slip[]=2.20130303X1-guests.2
 
 
 ### Add more items to a session
 
 Depending on your platform or SDK, the session can be passed in the form of a cookie or in the query string.  For the sake of documenation we'll pass it in the query string.  
  
-	GET /api/2.1/session?slip=3.20130303X1-guests.1&slip=rtdv4osethqurlmqgi55mcrkm4
+	GET /api/3.0/session?slip=3.3.030303X1-guests.1&session_id=rtdv4osethqurlmqgi55mcrkm4
+	
+If you wish to add multiple items at once, you can supply the SLIP in the form of an array.
+ 
+
+	GET /api/3.0/session?slip=[]3.3.030303X1-guests.1&slip[]=2.3.030303X1-guests.2&session_id=rtdv4osethqurlmqgi55mcrkm4
+
+
+### Getting session details
+
+You can fetch the details of the purposed booking by accessing the session object.  The item details will be returned with any request to the booking session.
+
+ 
+	GET /api/3.0/session?session_id=rtdv4osethqurlmqgi55mcrkm4
+
 
 ## Creating A Booking
 
@@ -309,7 +365,7 @@ You can dynamically fetch the fields required to complete the booking by calling
 <tr><th>Description:</th>
 <td>Fetch Booking Fields.</td></tr>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/form</td></tr>
+<td>/api/3.0/booking/form</td></tr>
 </tbody>
 </table>
 
@@ -323,7 +379,7 @@ To create a booking, submit the fields from the booking/form object along with t
 <tr><th>Description:</th>
 <td>Create a booking.</td></tr>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/create</td></tr>
+<td>/api/3.0/booking/create</td></tr>
 <tr><th>Methods:</th>
 <td>POST</td></tr>
 <tr>
@@ -348,7 +404,7 @@ You can check-in, and checkout a booking.  By default, a note is created under t
 <tr><th>Description:</th>
 <td>Check-in a booking.</td></tr>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/<b>booking_id</b>/checkin</td></tr>
+<td>/api/3.0/booking/<b>booking_id</b>/checkin</td></tr>
 <tr><th>Methods:</th>
 <td>POST</td></tr>
 </tbody>
@@ -358,15 +414,18 @@ You can check-in, and checkout a booking.  By default, a note is created under t
 <tr><th>Description:</th>
 <td>Check-out a booking.</td></tr>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/<b>booking_id</b>/checkout</td></tr>
+<td>/api/3.0/booking/<b>booking_id</b>/checkout</td></tr>
 <tr><th>Methods:</th>
 <td>POST</td></tr>
 </table> 
 
-	POST /api/2.1/booking/JHLL-20131230/checkin
 
 ##Bookmark
 Bookmarks are made available in the Checkfront mobile apps, and are listed under bookings while logged into the platform.  You can add or remove a bookmark to a specific booking for a specific account.
+
+This is only available if acting under and account_id.
+
+	POST /api/3.0/booking/DZYR-250114/bookmark
 
 <table>
 <tbody>
@@ -376,7 +435,7 @@ Bookmarks are made available in the Checkfront mobile apps, and are listed under
 </tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/booking/<b>booking_id</b>/checkout</td>
+<td>/api/3.0/booking/<b>booking_id</b>/checkout</td>
 </tr>
 <tr>
 <th>Methods:</th>
@@ -386,13 +445,16 @@ Bookmarks are made available in the Checkfront mobile apps, and are listed under
 </table> 
 
 ## Notes
+
 Notes can be added to bookings.  By default the authenticated account will be used. 
+
+	POST /api/3.0/booking/DZYR-250114/note
 
 <table>
 <tr><th>Description:</th>
 <td>Check-out a booking.</td></tr>
 <tr><th>Path:</th>
-<td>/api/2.1/booking/<b>booking_id</b>/note</td></tr>
+<td>/api/3.0/booking/<b>booking_id</b>/note</td></tr>
 <tr>
 <th>Methods:</th><td>POST</td>
 </tr>
@@ -406,6 +468,8 @@ Notes can be added to bookings.  By default the authenticated account will be us
 ## Status
 The status of an existing booking can be modified using the booking/status object.
 
+	POST /api/3.0/booking/DZYR-250114/status
+
 <table>
 <tbody>
 <tr>
@@ -414,7 +478,7 @@ The status of an existing booking can be modified using the booking/status objec
 </tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/booking/<b>booking_id</b>/status</td>
+<td>/api/3.0/booking/<b>booking_id</b>/status</td>
 </tr>
 <tr>
 <th>Methods:</th>
@@ -428,6 +492,7 @@ The status of an existing booking can be modified using the booking/status objec
 </table> 
 
 ## Journal
+[DEPRECATED] @todo update to /booking
 
 The booking journal provides access to existing bookings in the system.  You can query bookings by customer id, or individually by id.
 
@@ -439,11 +504,11 @@ The booking journal provides access to existing bookings in the system.  You can
 </tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/booking/journal/
+<td>/api/3.0/booking/journal/
 </tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/booking/journal/UJII-20131230 (single item)
+<td>/api/3.0/booking/journal/UJII-3.031230 (single item)
 </tr>
 <tr>
 <th>Methods:</th>
@@ -487,10 +552,10 @@ You can query customers based on indexed fields, including email address, name a
 <table>
 <tr><th>Description:</th>
 <td>Query customer records</td></tr>
-<tr><th>Path:</th><td>/api/2.1/customer/</td></tr>
+<tr><th>Path:</th><td>/api/3.0/customer/</td></tr>
 <tr>
 <th>Path:</th>
-<td>/api/2.1/customer/XX5-037-755 (single record)</td>
+<td>/api/3.0/customer/XX5-037-755 (single record)</td>
 </tr>
 <tr>
 <th>Methods:</th>
@@ -506,7 +571,7 @@ You can query customers based on indexed fields, including email address, name a
 <th>[options]</th><td>Array: optional return formatting.  Currently: bookings=1 also includes bookings made by the customer.</td></tr>
 </table>
 
-	GET /api/2.1/customer/?customer_email=test@checkfront.com&options[bookings]=1
+	GET /api/3.0/customer/?customer_email=test@checkfront.com&options[bookings]=1
 
 
 ---
