@@ -31,6 +31,7 @@ It's now possible to bypass the OAuth2 process by using a token pair for authent
 - Developer console added to platform to aid in development and testing API calls.
 - The booking token is now returned on booking/create
 - Required fields are listed in the error message on booking/create.
+- All return dates are formatted as unix timestamps.
 
 
 ---
@@ -109,10 +110,11 @@ All response is formatted in JSON (JavaScript object Notation).All modern langua
 ### Representation
 
 * All JSON should be UTF-8 encoded.
-* Date and time values ISO 8601 formatted, eg: YYYY-MM-DD, HH:MM:SS or as unix time stamp.
-* Dates are specified in the timezone configured in the account unless otherwise noted.
+* Dates are returned as a unix time stamp.
+* Simple dates are ISO 8601 formatted, eg: YYYY-MM-DD, HH:MM:SS and are relative to the configure timezone. 
+* Some resources may return a locale formatted date.
 * Booleans are either 1 (true) or 0 (false).
-* Currency values are decimal formatted, e.g: 119.20.  Summary currencies will be formatted as per the local.  Eg: €119.20.
+* Currency values are decimal formatted, e.g: 119.20.  Summary currencies will be formatted as per the system locale, eg: €119.20.
 
 
 ## General Housekeeping
