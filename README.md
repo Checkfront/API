@@ -1,4 +1,4 @@
-<img src="//www.checkfront.com/images/logo/Checkfront-80.png" height="40" alt="Checkfront" />
+<img src="https://www.checkfront.com/images/logo/Checkfront-80.png" height="40" alt="Checkfront" />
 
 # Checkfront API v3.0
 
