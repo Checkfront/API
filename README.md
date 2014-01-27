@@ -6,7 +6,7 @@
 
 ## Changes from v2
 
-There have been several changes in the v3.0 api that could impact some integrations.  Please review them here and update / test your project before switching to the v3 endpoint/
+There have been several changes in the v3.0 api that could impact some integrations.  Please review them here and update / test your project before switching to the v3 endpoint.
 
 ### Token Pair Authentication
 
@@ -17,7 +17,8 @@ It's now possible to bypass the OAuth2 process by using a token pair for authent
 - /api/3.0/ping - gets the status of the API.  
 - /api/3.0/help - lists avalaible resources.
 - /booking/{$ID}/invoice - fetchings the booking invoice.
-
+- /session/clear - clear a session
+- /session/reset - clear and end a session
 
 ### Deprecated
 
@@ -48,6 +49,7 @@ The Checkfront API extends the following functionality:
 * Fetch invoice details.
 * Update an existing booking.
 * Retrieve customer information.
+
 
 
 ### Prerequisites:
@@ -115,6 +117,7 @@ All response is formatted in JSON (JavaScript object Notation).All modern langua
 * Some resources may return a locale formatted date.
 * Booleans are either 1 (true) or 0 (false).
 * Currency values are decimal formatted, e.g: 119.20.  Summary currencies will be formatted as per the system locale, eg: €119.20.
+
 
 
 ## General Housekeeping
@@ -356,6 +359,20 @@ You can fetch the details of the purposed booking by accessing the session resou
 
  
 	GET /api/3.0/session?session_id=rtdv4osethqurlmqgi55mcrkm4
+
+	
+### Clear a session
+
+Clearing a session removes items and slips from the session but keeps the same session id.
+ 
+	GET /api/3.0/session/clear?session_id=rtdv4osethqurlmqgi55mcrkm4
+
+	
+### Ending a session
+
+Clears and destroys the current session (automatically called when a booking is successfully created).
+
+	GET /api/3.0/session/end?session_id=rtdv4osethqurlmqgi55mcrkm4
 
 
 ## Creating A Booking
