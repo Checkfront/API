@@ -1,0 +1,38 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "_en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": ""
+    },
+    "query": false,
+    "category": {
+        "2": {
+            "category_id": 2,
+            "name": "Accommodation",
+            "pos": 2,
+            "qty": 0,
+            "unit": "N"
+        },
+        "3": {
+            "category_id": 3,
+            "name": "Tours",
+            "pos": 5,
+            "qty": 0,
+            "unit": "N"
+        },
+        "4": {
+            "category_id": 4,
+            "name": "Rentals",
+            "pos": 0,
+            "qty": 0,
+            "unit": "N"
+        }
+    }
+}

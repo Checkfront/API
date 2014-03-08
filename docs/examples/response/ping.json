@@ -1,0 +1,27 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "_en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": "OK",
+        "resource": "ping",
+        "records": 1,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0005,
+        "method": "get"
+    },
+    "pong": {
+        "remote_addr": "66.228.55.142",
+        "time": 1394268118,
+        "timezone": "Canada/Pacific",
+        "provider": "API"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "_en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": "OK",
+        "resource": "help",
+        "records": 13,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0004,
+        "method": "get"
+    },
+    "help": {
+        "resources": [
+            "ui",
+            "slip",
+            "item",
+            "category",
+            "booking",
+            "customer",
+            "session",
+            "company",
+            "help",
+            "account",
+            "status",
+            "mobile",
+            "ping"
+        ],
+        "msg": "For help on a resource call help/item",
+        "see": "http://checkfront.github.io/API/"
+    }
+}

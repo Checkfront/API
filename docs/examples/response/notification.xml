@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<checkfront-notify version="3.0" host="your-company.checkfront.com">
+    <booking booking_id="157">
+        <status>HOLD</status><code>KMVQ-060314</code>
+        <created_date>1394156618</created_date>
+        <staff_id>1</staff_id>
+        <source_ip>66.228.55.142</source_ip>
+        <start_date>1394128800</start_date>
+        <end_date>1394128800</end_date>
+        <customer>
+            <name>Your Customer</name>
+            <email>support@checkfront.com</email>
+            <region>BC</region>
+            <address>170-422 Richards Street</address>
+            <city>Vancouver</city>
+            <country>CA</country>
+            <phone>1 (800) 559-0985</phone>
+            <postal_zip>V6B 2Z4</postal_zip>
+        </customer>
+        <meta>
+            <note>Free icecream!</note>
+            <mobile_device></mobile_device>
+        </meta>
+        <order currency_id="EUR">
+            <sub_total>46.00</sub_total>
+            <tax_total>2.30</tax_total>
+            <paid_total>0.00</paid_total>
+            <total>48.30</total>
+            <taxes>
+                <tax tax_id="6">
+                    <name>GST</name>
+                    <amount>2.30</amount>
+                </tax>
+            </taxes>
+            <discount>0.00</discount>
+            <items>
+                <item line_id="1" item_id="6">
+                    <start_date>1394128800</start_date>
+                    <end_date>1394128800</end_date>
+                    <sku>paddle</sku>
+                    <slip/>
+                    <package_id>1</package_id>
+                    <status>HOLD</status>
+                    <total>6.30</total>
+                    <tax_total>0.30</tax_total>
+                    <qty>2</qty>
+                </item>
+                <item line_id="2" item_id="8">
+                    <start_date>1394092800</start_date>
+                    <end_date>1394092800</end_date>
+                    <sku>paddleboard</sku>
+                    <slip/>
+                    <package_id>1</package_id>
+                    <status>HOLD</status>
+                    <total>42.00</total>
+                    <tax_total>2.00</tax_total>
+                    <qty>2</qty>
+                </item>
+            </items>
+        </order>
+    </booking>
+</checkfront-notify>

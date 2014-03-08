@@ -1,0 +1,36 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "_en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": "OK",
+        "resource": "account",
+        "records": 1,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.001,
+        "method": "get"
+    },
+    "account": [
+        {
+            "account_id": 1,
+            "first_name": "Your",
+            "last_name": "Account",
+            "email": "support@checkfront.com",
+            "mobile_phone": "",
+            "nickname": "You",
+            "login_id": "theboss",
+            "enabled": 1,
+            "date_created": 1376344370,
+            "date_last_login": 1392315666,
+            "ip_last_login": "66.228.55.142"
+        }
+    ]
+}

@@ -1,0 +1,447 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "_en",
+        "currency": "CAD"
+    },
+     "request": {
+        "status": ""
+    },
+    "booking_form_ui": {
+        "msg": [],
+        "errors": 0,
+        "mode": "html",
+        "_cnf": [],
+        "customer_name": {
+            "value": "",
+            "define": {
+                "required": 1,
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 1
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 1
+                    },
+                    "sys": 0,
+                    "lbl": "Name",
+                    "type": "text"
+                }
+            }
+        },
+        "customer_email": {
+            "value": "",
+            "define": {
+                "mask": "email",
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 1
+                    },
+                    "sys": 0,
+                    "lbl": "E-mail",
+                    "type": "text"
+                },
+                "required": 0
+            }
+        },
+        "customer_phone": {
+            "value": "",
+            "define": {
+                "mask": "simple",
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "Phone",
+                    "type": "text",
+                    "customer_address": true
+                },
+                "required": 0
+            }
+        },
+        "customer_address": {
+            "value": "",
+            "define": {
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "Address",
+                    "type": "text",
+                    "customer_address": true
+                },
+                "required": 0
+            }
+        },
+        "customer_city": {
+            "value": "",
+            "define": {
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "City",
+                    "type": "text",
+                    "customer_address": true
+                },
+                "required": 0
+            }
+        },
+        "customer_country": {
+            "value": "CA",
+            "define": {
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "Country",
+                    "type": "select",
+                    "customer_address": true,
+                    "options": {
+                        "AF": "Afghanistan",
+                        "AL": "Albania",
+                        "DZ": "Algeria",
+                        "AS": "American Samoa",
+                        "AD": "Andorra",
+                        "AO": "Angola",
+                        "AG": "Antigua And Barbuda",
+                        "AR": "Argentina",
+                        "AM": "Armenia",
+                        "AU": "Australia",
+                        "AT": "Austria",
+                        "AZ": "Azerbaijan",
+                        "BS": "Bahamas",
+                        "BH": "Bahrain",
+                        "BD": "Bangladesh",
+                        "BB": "Barbados",
+                        "BY": "Belarus",
+                        "BE": "Belgium",
+                        "BZ": "Belize",
+                        "BJ": "Benin",
+                        "BM": "Bermuda",
+                        "BT": "Bhutan",
+                        "BO": "Bolivia",
+                        "BA": "Bosnia And Herzegovina",
+                        "BW": "Botswana",
+                        "BR": "Brazil",
+                        "BN": "Brunei Darussalam",
+                        "BG": "Bulgaria",
+                        "BF": "Burkina Faso",
+                        "BI": "Burundi",
+                        "KH": "Cambodia",
+                        "CM": "Cameroon",
+                        "CA": "Canada",
+                        "CV": "Cape Verde",
+                        "KY": "Cayman Islands",
+                        "CF": "Central African Republic",
+                        "TD": "Chad",
+                        "CL": "Chile",
+                        "CN": "China",
+                        "CO": "Colombia",
+                        "KM": "Comoros",
+                        "CD": "Congo (DC)",
+                        "CG": "Congo (R)",
+                        "CK": "Cook Islands",
+                        "CR": "Costa Rica",
+                        "HR": "Croatia",
+                        "CU": "Cuba",
+                        "CY": "Cyprus",
+                        "CZ": "Czech Republic",
+                        "DK": "Denmark",
+                        "DJ": "Djibouti",
+                        "DM": "Dominica",
+                        "DO": "Dominican Republic",
+                        "TP": "East Timor",
+                        "EC": "Ecuador",
+                        "EG": "Egypt",
+                        "SV": "El Salvador",
+                        "GQ": "Equatorial Guinea",
+                        "ER": "Eritrea",
+                        "EE": "Estonia",
+                        "ET": "Ethiopia",
+                        "FK": "Falkland Islands",
+                        "FO": "Faroe Islands",
+                        "FJ": "Fiji",
+                        "FI": "Finland",
+                        "FR": "France",
+                        "PF": "French Polynesia",
+                        "GA": "Gabon",
+                        "GM": "Gambia",
+                        "GE": "Georgia",
+                        "DE": "Germany",
+                        "GH": "Ghana",
+                        "GI": "Gibraltar",
+                        "GR": "Greece",
+                        "GL": "Greenland",
+                        "GD": "Grenada",
+                        "GP": "Guadeloupe",
+                        "GU": "Guam",
+                        "GT": "Guatemala",
+                        "GN": "Guinea",
+                        "GW": "Guinea-bissau",
+                        "HT": "Haiti",
+                        "VA": "Holy See",
+                        "HN": "Honduras",
+                        "HK": "Hong Kong",
+                        "HU": "Hungary",
+                        "IS": "Iceland",
+                        "IN": "India",
+                        "ID": "Indonesia",
+                        "IR": "Iran",
+                        "IQ": "Iraq",
+                        "IE": "Ireland",
+                        "IL": "Israel",
+                        "IT": "Italy",
+                        "CI": "Ivory coast",
+                        "JM": "Jamaica",
+                        "JP": "Japan",
+                        "JO": "Jordan",
+                        "KZ": "Kazakhstan",
+                        "KE": "Kenya",
+                        "KI": "Kiribati",
+                        "KW": "Kuwait",
+                        "KG": "Kyrgyzstan",
+                        "LA": "Laos",
+                        "LV": "Latvia",
+                        "LB": "Lebanon",
+                        "LS": "Lesotho",
+                        "LR": "Liberia",
+                        "LI": "Liechtenstein",
+                        "LT": "Lithuania",
+                        "LU": "Luxembourg",
+                        "LY": "Lybia",
+                        "MO": "Macao",
+                        "MK": "Macedonia",
+                        "MG": "Madagascar",
+                        "MW": "Malawi",
+                        "MY": "Malaysia",
+                        "MV": "Maldives",
+                        "ML": "Mali",
+                        "MT": "Malta",
+                        "MQ": "Martinique",
+                        "MR": "Mauritania",
+                        "MU": "Mauritius",
+                        "MX": "Mexico",
+                        "MD": "Moldova",
+                        "MC": "Monaco",
+                        "MN": "Mongolia",
+                        "MS": "Montserrat",
+                        "MA": "Morocco",
+                        "MZ": "Mozambique",
+                        "MM": "Myanmar",
+                        "NA": "Namibia",
+                        "NR": "Nauru",
+                        "NP": "Nepal",
+                        "NL": "Netherlands",
+                        "AN": "Netherlands Antilles",
+                        "NC": "New Caledonia",
+                        "NZ": "New Zealand",
+                        "NI": "Nicaragua",
+                        "NE": "Niger",
+                        "NG": "Nigeria",
+                        "KP": "North Korea",
+                        "MP": "Northern Mariana Islands",
+                        "NO": "Norway",
+                        "OM": "Oman",
+                        "PK": "Pakistan",
+                        "PW": "Palau",
+                        "PS": "Palestine",
+                        "PA": "Panama",
+                        "PG": "Papua New Guinea",
+                        "PY": "Paraguay",
+                        "PE": "Peru",
+                        "PH": "Philippines",
+                        "PL": "Poland",
+                        "PT": "Portugal",
+                        "PR": "Puerto Rico",
+                        "QA": "Qatar",
+                        "RE": "Reunion",
+                        "RO": "Romania",
+                        "RU": "Russian Federation",
+                        "RW": "Rwanda",
+                        "SPM": "Saint-Pierre et Miquelon",
+                        "WS": "Samoa",
+                        "SM": "San Marino",
+                        "ST": "Sao Tome And Principe",
+                        "SA": "Saudi Arabia",
+                        "SN": "Senegal",
+                        "YU": "Serbia and Montenegro",
+                        "SC": "Seychelles",
+                        "SL": "Sierra Leone",
+                        "SG": "Singapore",
+                        "SK": "Slovakia",
+                        "SI": "Slovenia",
+                        "SB": "Solomon Islands",
+                        "SO": "Somalia",
+                        "ZA": "South Africa",
+                        "KR": "South Korea",
+                        "ES": "Spain",
+                        "LK": "Sri Lanka",
+                        "VC": "St Vincent And The Grenadines",
+                        "SD": "Sudan",
+                        "SR": "Suriname",
+                        "SZ": "Swaziland",
+                        "SE": "Sweden",
+                        "CH": "Switzerland",
+                        "SY": "Syria",
+                        "TW": "Taiwan",
+                        "TJ": "Tajikistan",
+                        "TZ": "Tanzania",
+                        "TH": "Thailand",
+                        "TG": "Togo",
+                        "TO": "Tonga",
+                        "TT": "Trinidad And Tobago",
+                        "TN": "Tunisia",
+                        "TR": "Turkey",
+                        "TM": "Turkmenistan",
+                        "TV": "Tuvalu",
+                        "UG": "Uganda",
+                        "UA": "Ukraine",
+                        "AE": "United Arab Emirates",
+                        "GB": "United Kingdom",
+                        "US": "United States",
+                        "UY": "Uruguay",
+                        "UZ": "Uzbekistan",
+                        "VU": "Vanuatu",
+                        "VE": "Venezuela",
+                        "VN": "Vietnam",
+                        "VG": "Virgin Islands, British",
+                        "VI": "Virgin Islands, U.S.",
+                        "YE": "Yemen",
+                        "ZM": "Zambia",
+                        "ZW": "Zimbabwe"
+                    }
+                },
+                "required": 0
+            }
+        },
+        "customer_region": {
+            "value": "BC",
+            "define": {
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "Province",
+                    "type": "select",
+                    "customer_address": true,
+                    "options": {
+                        "AB": "Alberta",
+                        "BC": "British Columbia",
+                        "MB": "Manitoba",
+                        "NB": "New Brunswick",
+                        "NF": "Newfoundland",
+                        "NWT": "Northwest Territories",
+                        "NS": "Nova Scotia",
+                        "NU": "Nunavut",
+                        "ON": "Ontario",
+                        "PE": "Prince-Edward Island",
+                        "QC": "Quebec",
+                        "SK": "Saskatchewan",
+                        "YK": "Yukon"
+                    }
+                },
+                "required": 0
+            }
+        },
+        "customer_postal_zip": {
+            "value": "",
+            "define": {
+                "mask": "simple",
+                "layout": {
+                    "staff": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 1,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 0,
+                    "lbl": "Postal code",
+                    "type": "text",
+                    "customer_address": true
+                },
+                "required": 0
+            }
+        },
+        "note": {
+            "value": "",
+            "define": {
+                "layout": {
+                    "staff": {
+                        "invoice": 0,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "customer": {
+                        "invoice": 0,
+                        "form": 1,
+                        "required": 0
+                    },
+                    "sys": 1,
+                    "lbl": "Note",
+                    "type": "textarea"
+                },
+                "required": 0
+            }
+        }
+    }
+}

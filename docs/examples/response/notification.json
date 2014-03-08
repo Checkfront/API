@@ -1,0 +1,81 @@
+{
+    "@attributes": {
+        "version": "3.0",
+        "host": "your-company.checkfront.com"
+    },
+    "booking": {
+        "@attributes": {
+            "booking_id": "157"
+        },
+        "status": "HOLD",
+        "code": "KMVQ-060314",
+        "created_date": "1394156618",
+        "staff_id": "1",
+        "source_ip": "66.228.55.142",
+        "start_date": "1394128800",
+        "end_date": "1394128800",
+        "customer": {
+            "name": "Your Customer",
+            "email": "support@checkfront.com",
+            "region": "BC",
+            "address": "170-422 Richards Street",
+            "city": "Vancouver",
+            "country": "CA",
+            "phone": "1 (800) 559-0985",
+            "postal_zip": "V6B 2Z4"
+        },
+        "meta": {
+            "note": "Free icecream!",
+            "mobile_device": {}
+        },
+        "order": {
+            "@attributes": {
+                "currency_id": "CAD"
+            },
+            "sub_total": "46.00",
+            "tax_total": "2.30",
+            "paid_total": "0.00",
+            "total": "48.30",
+            "taxes": {
+                "tax": {
+                    "@attributes": {
+                        "tax_id": "6"
+                    },
+                    "name": "GST",
+                    "amount": "2.30"
+                }
+            },
+            "items": {
+                "item": [{
+                    "@attributes": {
+                        "line_id": "1",
+                        "item_id": "6"
+                    },
+                    "start_date": "1394128800",
+                    "end_date": "1394128800",
+                    "sku": "paddle",
+                    "slip": {},
+                    "package_id": "1",
+                    "status": "HOLD",
+                    "total": "6.30",
+                    "tax_total": "0.30",
+                    "qty": "2"
+                }, {
+                    "@attributes": {
+                        "line_id": "2",
+                        "item_id": "8"
+                    },
+                    "start_date": "1394092800",
+                    "end_date": "1394092800",
+                    "sku": "paddleboard",
+                    "slip": {},
+                    "package_id": "1",
+                    "status": "HOLD",
+                    "total": "42.00",
+                    "tax_total": "2.00",
+                    "qty": "2"
+                }]
+            }
+        }
+    }
+}
