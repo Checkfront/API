@@ -3,9 +3,12 @@ booking/index
 .. http:method:: GET /api/3.0/booking/index
 
 	:optparam string status_id: The current status of a booking.
+	:optparam integer customer_id: The customer id associated with the booking.
 	:optparam string customer_email: The customer email associated with the booking.
 	:optparam string/timestamp start_date: The date the booking starts on (i.e. check-in).
-	:optparam string/timestamp end_date: The date the booking starts on (i.e. check-in).	
+	:optparam string/timestamp end_date: The date the booking starts on (i.e. check-in).
+	:optparam integer limit: The limit of bookings to return per page (default: 100).
+	:optparam integer page: The page of results to return.
 
 .. http:response:: Retrieve a listing of bookings in the system.
 

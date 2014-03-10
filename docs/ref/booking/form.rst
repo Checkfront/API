@@ -1,6 +1,6 @@
 booking/form
 ------------
-This call will can easily be cached if your configuration does not often change, but depending on your setup, a number of the fields returned in this request may be required to complete a booking.
+This call can easily be cached if your configuration does not often change, but depending on your setup, a number of the fields returned in this request may be required to complete a booking.
 
 You will receive an error indicating missing information if you attempt to call :doc:`create` without the required fields, either those required by staff if you're acting on behalf of a staff member, or by a customer otherwise.
 
