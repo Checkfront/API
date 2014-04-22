@@ -52,8 +52,7 @@ As with token authentication, a few fields are passed into the object on creatio
 			'host' => 'your-company.checkfront.com',
 			'auth_type' => 'oauth2',
 			'consumer_key' => '1d2d5cad60174b5972243693d082e4b4e54979bf',
-			'consumer_secret' => '8e3751291c3d0fe090a7d5b18d964407baff96c1028e1e1afb1014d1db85b25a',
-			'redirect_uri' => 'oob'
+			'consumer_secret' => '8e3751291c3d0fe090a7d5b18d964407baff96c1028e1e1afb1014d1db85b25a'
 		)
 	);
 
