@@ -81,7 +81,7 @@ Logging in with a Staff Account
 	To exchange the code for an access token, make a call to your **Access Token URL** (eg. ``https://your-company.checkfront.com/oauth/token/``) with the following parameters set: 
 
 	+------------------+--------------------------------------------------------------------------------+
-	| **client_key**   | *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
+	| **client_id**    | *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
 	+------------------+--------------------------------------------------------------------------------+
 	| **client_secret**| *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
 	+------------------+--------------------------------------------------------------------------------+	
@@ -179,7 +179,7 @@ After your current **access token** has expired, this token can be passed to cre
 To exchange the the refresh token for a new access/refresh token pair, make a call to your **Access Token URL** (eg. ``https://your-company.checkfront.com/oauth/token/``) with the following parameters set: 
 
 	+------------------+--------------------------------------------------------------------------------+
-	| **client_key**   | *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
+	| **client_id**    | *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
 	+------------------+--------------------------------------------------------------------------------+
 	| **client_secret**| *Should be sent as HTTP Basic credentials.*  See :ref:`consumer-key-secret`.   |
 	+------------------+--------------------------------------------------------------------------------+	
