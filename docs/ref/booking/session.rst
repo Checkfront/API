@@ -7,27 +7,27 @@ Each session call will return the **session_id** of the active session, and any 
 
 To start a new session, you simply pass in the booking :ref:`slip`\s returned when from earlier "**rated**" inventory :doc:`../item` queries.
 
-.. http:method:: POST /api/3.0/booking/session
+.. http:post:: /api/3.0/booking/session
 
-	:optparam string session_id: The session ID to be loaded or written to.  *Can also be sent as a cookie.*
-	:optparam string/array slip: A :ref:`slip`, or multiple :ref:`slip`\s to be **added** to a session.  If need to add or remove more of the *same* item to a session, use **alter** below.
-	:optparam array alter: Alterations to be made on the current session, based on the **line_id** of items in the session and actions to be taken.  To change the **qty** of an item in the session, send an alter for the line_id of that item with the integer value you need to set (e.g alter[3]=5 sets item 3 to a qty of 5).  To **remove** an item, use alter 'remove'; and to opt-in or out of listed package items use 'optin' or 'optout' respectively.
-	
-.. http:response:: Returns the information about and stored in the current server session.
+	Create or return information about and stored in the current server session.
+	Once initiated, you can fetch the details of a proposed booking by accessing the **session** again with the **session_id** found in the response.  The item details for the session will be returned with your request.
 
-Once initiated, you can fetch the details of a proposed booking by accessing the **session** again with the **session_id** found in the response.  The item details for the session will be returned with your request.
+	:form string session_id: The session ID to be loaded or written to.  *Can also be sent as a cookie.*
+	:form string/array slip: A :ref:`slip`, or multiple :ref:`slip`\s to be **added** to a session.  If need to add or remove more of the *same* item to a session, use **alter** below.
+	:form array alter: Alterations to be made on the current session, based on the **line_id** of items in the session and actions to be taken.  To change the **qty** of an item in the session, send an alter for the line_id of that item with the integer value you need to set (e.g alter[3]=5 sets item 3 to a qty of 5).  To **remove** an item, use alter 'remove'; and to opt-in or out of listed package items use 'optin' or 'optout' respectively.
 
-.. http:method:: GET /api/3.0/booking/session
 
-	:param string session_id: The session ID to read information from.  *Can also be sent as a cookie.*
+.. http:get:: /api/3.0/booking/session
+
+	:query string session_id: The session ID to read information from.  *Can also be sent as a cookie.*
 	
 .. literalinclude:: ../../examples/response/session.json
-	:language: js
+	:language: json
 	:linenos:
 	:emphasize-lines: 24
 
 
-.. http:method:: POST /api/3.0/booking/session/clear
-.. http:method:: POST /api/3.0/booking/session/end
+.. http:post:: /api/3.0/booking/session/clear
+.. http:post:: /api/3.0/booking/session/end
 
-	:param string session_id: The session ID to empty or close.  *Can also be sent as a cookie.*
+	:query string session_id: The session ID to empty or close.  *Can also be sent as a cookie.*

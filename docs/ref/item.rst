@@ -29,43 +29,58 @@ Booking parameters have many options, and can be configured to control inventory
 Request
 -------
 
-.. http:method:: GET /api/3.0/item
+.. http:get:: /api/3.0/item
 
-	:optparam date start_date: (rated) Booking start date.
-	:optparam date end_date: (rated) Booking end date.
-	:optparam date date: (rated) Alias of **start date** (for same-day bookings).
-	:optparam date start_time: (rated) Start time (used in hourly bookings).
-	:optparam date end_time: (rated) End time (used in hourly bookings).
-	:optparam integer category_id: Filter items by category.
-	:optparam boolean packages: Show package options.
-	:optparam integer available: (rated) Filter to items with at least this many left in stock.
-	:optparam string keyword: Filter to items with a name containing this keyword.
-	:optparam string item_id: A comma-seperated list of items to filter to.
-	:optparam string discount_code: (rated) The discount code to apply to the price.
-	:optparam string rules: 'soft' will prevent triggering date based rule errors, or 'off' will disable rule checking.
-	:optparam array param: (rated) See :ref:`booking-param`.
+	Retrieve a list of the enabled items in the system.
+
+	:query date start_date: (rated) Booking start date.
+	:query date end_date: (rated) Booking end date.
+	:query date date: (rated) Alias of **start date** (for same-day bookings).
+	:query date start_time: (rated) Start time (used in hourly bookings).
+	:query date end_time: (rated) End time (used in hourly bookings).
+	:query integer category_id: Filter items by category.
+	:query boolean packages: Show package options.
+	:query integer available: (rated) Filter to items with at least this many left in stock.
+	:query string keyword: Filter to items with a name containing this keyword.
+	:query string item_id: A comma-seperated list of items to filter to.
+	:query string discount_code: (rated) The discount code to apply to the price.
+	:query string rules: 'soft' will prevent triggering date based rule errors, or 'off' will disable rule checking.
+	:query array param: (rated) See :ref:`booking-param`.
 	
-.. http:response:: Retrieve a list of the enabled items in the system.
+.. http:get:: /api/3.0/item/{item_id}
 
-.. http:method:: GET /api/3.0/item/{item_id}
+	Retrieve details for a single item.	Shares same params as above for rated requests.
 
-	:arg string item_id: The unique item_id of the item to query, as found in a response or your Checkfront panel.
+	:param string item_id: The unique item_id of the item to query, as found in a response or your Checkfront panel.
 
-	Shares same params as above.
+.. http:get:: /api/3.0/item/{item_id}/cal
 
-.. http:response:: Retrieve details for a single item.
+	Retrieve calendar availability for a single item.
+
+	:param string item_id: The unique item_id of the item to query.
+	:query date start_date: Availability range start date.
+	:query date end_date: Availability range start date.
+
+.. http:get:: /api/3.0/item/cal
+
+	Retrieve calendar availability for a set of items.
+
+	:query array|integer item_id: The unique item_id of the item to query, or an array of item IDs
+	:query integer category_id: A category of items to filter to.
+	:query date start_date: Availability range start date.
+	:query date end_date: Availability range start date.
 
 Unrated Response
 ++++++++++++++++
 
 .. literalinclude:: ../examples/response/item.json
-	:language: js
+	:language: json
 	:linenos:
 
 Rated Response
 ++++++++++++++
 
 .. literalinclude:: ../examples/response/item-rated.json
-	:language: js
+	:language: json
 	:linenos:
 	:emphasize-lines: 101

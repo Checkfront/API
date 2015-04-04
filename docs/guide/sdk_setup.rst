@@ -17,7 +17,7 @@ Using the PHP-SDK with your extended Checkfront class, you would connect to the 
 	:linenos:
 	:emphasize-lines: 6,7
    
-	new CheckfrontAPI(
+	$Checkfront = new CheckfrontAPI(
 		array(
 			'host' => 'your-company.checkfront.com',
 			'account_id' => 'off', // act on behalf of the customer
@@ -47,7 +47,7 @@ As with token authentication, a few fields are passed into the object on creatio
 	:linenos:
 	:emphasize-lines: 5-7
 
-	new CheckfrontAPI(
+	$Checkfront = new CheckfrontAPI(
 		array(
 			'host' => 'your-company.checkfront.com',
 			'auth_type' => 'oauth2',
@@ -97,7 +97,7 @@ New logins
 
 	.. sourcecode:: php
 
-		CheckfrontAPI->fetch_token($_GET['code']);
+		$Checkfront->fetch_token($_GET['code']);
 	
 #. On completion, a new authenticated token will be returned, and as above, the token will be sent to your **store()** function.  
 #. You're ready to make calls to the API on behalf of the staff member.
@@ -123,7 +123,8 @@ You could instead use:
 	:linenos:
 
 	$data = array(
-		'start_date'=>'today',
-		'status_id'=>'PAID'
+		'start_date' => 'today',
+		'status_id' => 'PAID'
 	);
-	Checkfront->get('booking/index',$data);
+
+	$Checkfront->get('booking/index', $data);

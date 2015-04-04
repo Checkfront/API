@@ -13,5 +13,3 @@ API |release| Endpoints
 	item
 	help
 	ping
-	session
-	status

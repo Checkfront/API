@@ -7,16 +7,19 @@ To retrieve information on a specific customer, you should ideally use the custo
 
 If you do not have the customer ID stored, you can also look up customers based on indexed fields, including email address, name, and phone number.  These must be an exact match, but can return multiple results on non-unique fields such as the customer name.  The results will be stored in the "customers" object in the JSON response.
 
-.. http:method:: GET /api/3.0/customer
+.. http:get:: /api/3.0/customer
 
-.. http:method:: GET /api/3.0/customer/{customer_id}
+	Retrieve a list of customers.
 
-	:arg string customer_id: The unique customer code identifying a customer in the system.
-	
-	:optparam string customer_email: A unique customer e-mail address to search.
-	:optparam string customer_name: The full name of the customer to search.
-	:optparam string customer_phone: The (exact) customer phone number to search.
-	
-.. http:response:: Retrieve contact details for a customer.
+	:query string customer_id: The unique customer code identifying a customer in the system.
+	:query string customer_email: A unique customer e-mail address to search.
+	:query string customer_name: The full name of the customer to search.
+	:query string customer_phone: The (exact) customer phone number to search.
+
+.. http:get:: /api/3.0/customer/{customer_id}
+
+	Retrieve contact details for a customer.
+
+	:param string customer_id: The unique customer code identifying a customer in the system.
 
 .. literalinclude:: ../examples/response/customer.json

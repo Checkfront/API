@@ -47,15 +47,17 @@ Authenticating with Token Pairs
 -------------------------------
 If you are using token authentication, your application will provide you with two keys:
 
-+------------------+
-| **API Key**      |
-+------------------+
-| **API Secret**   |
-+------------------+
+	+------------------+--------------------------------------------------------------------------------+
+	| **API Key**      | Will be set as your *HTTP BASIC* **Username**                                  |
+	+------------------+--------------------------------------------------------------------------------+
+	| **API Secret**   | Will be set as your *HTTP BASIC* **Password**                                  |
+	+------------------+--------------------------------------------------------------------------------+
 
 When sent together in a request header using HTTP Basic authorization, these allow direct access to API endpoints without any additional preamble.
 
-See ``CURLOPT_USERPWD`` if working with cURL libraries, or the documentation on *HTTP Basic authentication* relevant to your chosen framework.  If building your requests manually, HTTP Basic credentials are **base64 encoded** in the sequence "``username:password``" and sent in the **request header** in the following format::
+See ``CURLOPT_USERPWD`` if working with cURL libraries, or the documentation on *HTTP Basic authentication* relevant to your chosen framework.  If building your requests manually, HTTP Basic credentials are **base64 encoded** in the sequence "``username:password``" and sent in the **request header** in the following format:
+
+.. sourcecode:: http
 
 	Authorization: Basic M2JlOTg2NDFmMDc0NWI2ZmU3ZGFjYzJkZjk0N2FkYmMxZGE3MzEyZDo0YzRkNTk4YTVkOTQwZjA4ZmRiNDM1YjY5YWY5ODZjNzBmMjIwNmRk
 

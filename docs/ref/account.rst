@@ -1,11 +1,11 @@
 account
 =======
 
-.. http:method:: GET /api/3.0/account
+.. http:get:: /api/3.0/account
 
-.. http:response:: Retrieve a list detailing all staff accounts in your system.
+	Retrieve a list detailing all staff accounts in your system.
 
 .. literalinclude:: ../examples/response/account.json
-	:language: js
+	:language: json
 	:linenos:
 	:emphasize-lines: 21-35
