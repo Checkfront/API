@@ -8,11 +8,14 @@ booking
 
 	Retrieve a listing of bookings in the system.
 
+	Query timestamps may be Date strings or unix timestamps, and can be prefixed with '<' or '>' to match before or after a date.
+
 	:query string status_id: The current status of a booking.
 	:query integer customer_id: The customer id associated with the booking.
 	:query string customer_email: The customer email associated with the booking.
 	:query string/timestamp start_date: The date the booking starts on (i.e. check-in).
-	:query string/timestamp end_date: The date the booking starts on (i.e. check-in).
+	:query string/timestamp end_date: The date the booking ends on (i.e. check-out).
+	:query string/timestamp last_modified: The date the booking was last changed. Useful for getting bookings added or changed since your last call.
 	:query integer limit: The limit of bookings to return per page (default: 100).
 	:query integer page: The page of results to return.
 
