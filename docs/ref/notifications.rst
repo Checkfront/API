@@ -5,6 +5,8 @@ Your Checkfront account is capable of directly POSTing details of new or modifie
 
 Notifications are sent over a standard **HTTPS POST** request in the form of a **JSON** or **XML** formatted booking object containing various particulars on a booking, and can be triggered to send on one or more status changes you as defined in the setup.
 
+Your server should respond with an HTTP 200 upon receipt. After 5 consecutive unsuccessful attempts, your webhook will be disabled.
+
 Webhook setup can be found in the **Manage > Developer** section of your Checkfront account under the "**Webhooks**" tab.
 
 Notification Data
