@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkfront-notify version="3.11.0.0" host="your-website.checkfront.com">
+    <type>transaction</type>
+    <action>insert</action>
+    <transaction>
+        <transaction_id>TEST1482284175</transaction_id>
+        <date>1482284175</date>
+        <status>PAID</status>
+        <amount>27.00</amount>
+        <gateway_id>TestPayment</gateway_id>
+        <payment_mask>1111</payment_mask>
+        <payment_type>Visa</payment_type>
+        <payment_customer>Testy McTestface</payment_customer>
+        <booking_id>LULZ-080916</booking_id>
+    </transaction>
+</checkfront-notify>

@@ -1,0 +1,17 @@
+{
+    "version": "3.11.0.0",
+    "host": "your-company.checkfront.com",
+    "type": "transaction",
+    "action": "insert",
+    "transaction": {
+        "transaction_id": "TEST1482283550",
+        "date": 1582283550,
+        "status": "PAID",
+        "amount": "27.00",
+        "gateway_id": "TestPayment",
+        "payment_mask": "1111",
+        "payment_type": "Visa",
+        "payment_customer": "Testy McTestface",
+        "booking_id": "LULZ-080916"
+    }
+}
