@@ -1,0 +1,19 @@
+{
+    "booking/index": {
+	"3149": {
+	    "booking_id": 3149,
+	    "code": "PVCA-050314",
+	    "status_id": "PAID",
+	    "status_name": "Paid",
+	    "created_date": 1394079749,
+	    "total": "141.90",
+	    "tax_total": "12.90",
+	    "paid_total": "141.90",
+	    "customer_name": "Your Customer",
+	    "customer_email": "support@checkfront.com",
+	    "summary": "Islands Snorkeling Tour",
+	    "date_desc": "Wed Mar 5, 2014",
+	    "token": "57c2ac0a58dc02a72df50a8841b1c8a190627ff69a2435060a3ed3d469819477"
+	}
+    }
+}

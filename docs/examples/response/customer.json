@@ -1,0 +1,39 @@
+{
+  "version": "3.0",
+  "account_id": 1,
+  "host_id": "test.checkfront.com",
+  "name": "test",
+  "locale": {
+	"id": "en_CA",
+	"lang": "en",
+	"currency": "CAD"
+  },
+  "request": {
+	"status": ""
+  },
+  "customer": {
+	"customer_id": 6,
+	"code": "LF5-965-746",
+	"status_id": "ACTIVE",
+	"customer_name": "Testy McTestface",
+	"customer_email": "test@checkfront.com",
+	"customer_region": "BC",
+	"customer_city": "Victoria",
+	"customer_address": "123 Fake Street",
+	"customer_country": "CA",
+	"customer_postal_zip": "V8R 5G0",
+	"customer_phone": "+12505555555",
+	"meta": {
+	  "staff_comment": "Loves the color green",
+	  "customer_account_id": ""
+	},
+	"bookings": {
+	  "ABCD-080915": {
+		"created_date": "2015-09-08T19:05:21-08:00"
+	  },
+	  "EFGH-111016": {
+		"created_date": "2016-10-11T15:28:34-08:00"
+	  }
+	}
+  }
+}

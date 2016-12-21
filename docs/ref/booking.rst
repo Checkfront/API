@@ -33,10 +33,9 @@ booking
 	:>jsonarr string date_desc: A string describing the booked dates/times.
 	:>jsonarr string token: A customer token for the booking, can be used to build links to customer portions of the reservation system.
 
-	.. literalinclude:: ../examples/response/booking-index.json
+	.. literalinclude:: ../examples/response/booking-index-snippet.json
 		:language: json
 		:linenos:
-		:lines: 23-39
 
 Booking endpoints
 -----------------

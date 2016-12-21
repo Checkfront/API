@@ -59,6 +59,7 @@ See ``CURLOPT_USERPWD`` if working with cURL libraries, or the documentation on 
 
 .. sourcecode:: http
 
+	GET /booking/1 HTTP/1.1
 	Authorization: Basic M2JlOTg2NDFmMDc0NWI2ZmU3ZGFjYzJkZjk0N2FkYmMxZGE3MzEyZDo0YzRkNTk4YTVkOTQwZjA4ZmRiNDM1YjY5YWY5ODZjNzBmMjIwNmRk
 
 

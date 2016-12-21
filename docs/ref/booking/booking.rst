@@ -2,17 +2,17 @@ booking/[booking_id]
 ====================
 .. http:get:: /api/3.0/booking/{booking_id}
 
+	Retrieve extended information on a specific booking.
+
 	:param string booking_id: The unique booking code identifying a booking in the system.
-	
-.. http:response:: Retrieve extended information on a specific booking.
 
 booking/[booking_id]/invoice
 ----------------------------
 .. http:get:: /api/3.0/booking/{booking_id}/invoice
 
+	Return a pre-formatted invoice to display to the customer.
+
 	:param string booking_id: The unique booking code identifying a booking in the system.
-	
-.. http:response:: Return a pre-formatted invoice to display to the customer.
 
 booking/[booking_id]/checkin
 ----------------------------
@@ -44,10 +44,6 @@ Specifying the ``status_id`` is **required**, but any other update fields are op
 	
 	:query boolean notify: Toggle whether to trigger notifications when this booking is changed. (default: 1)
 	:query boolean set_paid: When set to **1** (true) on an *unpaid* booking, and the requested status_id is '**PAID**', attempt to create a POS transaction covering the remaining cost of the booking (cannot be used with other input).
-
-	.. literalinclude:: ../examples/response/booking-index.json
-		:language: json
-		:linenos:
 
 booking/[booking_id]/bookmark
 -----------------------------

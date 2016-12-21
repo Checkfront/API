@@ -23,3 +23,5 @@ If you do not have the customer ID stored, you can also look up customers based 
 	:param string customer_id: The unique customer code identifying a customer in the system.
 
 .. literalinclude:: ../examples/response/customer.json
+	:language: json
+	:linenos:
