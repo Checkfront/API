@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <checkfront-notify version="3.0" host="your-company.checkfront.com">
     <booking booking_id="157">
-        <status>HOLD</status><code>KMVQ-060314</code>
+        <status>HOLD</status>
+        <code>KMVQ-060314</code>
         <created_date>1394156618</created_date>
         <staff_id>1</staff_id>
         <source_ip>66.228.55.142</source_ip>

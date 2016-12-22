@@ -46,35 +46,38 @@
                 }
             },
             "items": {
-                "item": [{
-                    "@attributes": {
-                        "line_id": "1",
-                        "item_id": "6"
+                "item": [
+                    {
+                        "@attributes": {
+                            "line_id": "1",
+                            "item_id": "6"
+                        },
+                        "start_date": "1394128800",
+                        "end_date": "1394128800",
+                        "sku": "paddle",
+                        "slip": {},
+                        "package_id": "1",
+                        "status": "HOLD",
+                        "total": "6.30",
+                        "tax_total": "0.30",
+                        "qty": "2"
                     },
-                    "start_date": "1394128800",
-                    "end_date": "1394128800",
-                    "sku": "paddle",
-                    "slip": {},
-                    "package_id": "1",
-                    "status": "HOLD",
-                    "total": "6.30",
-                    "tax_total": "0.30",
-                    "qty": "2"
-                }, {
-                    "@attributes": {
-                        "line_id": "2",
-                        "item_id": "8"
-                    },
-                    "start_date": "1394092800",
-                    "end_date": "1394092800",
-                    "sku": "paddleboard",
-                    "slip": {},
-                    "package_id": "1",
-                    "status": "HOLD",
-                    "total": "42.00",
-                    "tax_total": "2.00",
-                    "qty": "2"
-                }]
+                    {
+                        "@attributes": {
+                            "line_id": "2",
+                            "item_id": "8"
+                        },
+                        "start_date": "1394092800",
+                        "end_date": "1394092800",
+                        "sku": "paddleboard",
+                        "slip": {},
+                        "package_id": "1",
+                        "status": "HOLD",
+                        "total": "42.00",
+                        "tax_total": "2.00",
+                        "qty": "2"
+                    }
+                ]
             }
         }
     }

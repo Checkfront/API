@@ -1,0 +1,70 @@
+{
+    "version": "3.11.0.0",
+    "host": "test.checkfront.com",
+    "type": "rate",
+    "action": "update",
+    "rate": {
+        "rate_id": 8,
+        "name": "Max 3 Days",
+        "start_date": 20161221,
+        "end_date": 0,
+        "span": 0,
+        "price_src": "Yield",
+        "dynamic_rate": 10,
+        "status": "A",
+        "type": "SP",
+        "repeat_id": "W",
+        "enabled": 1,
+        "details": {
+            "thresholds": [
+                {
+                    "threshold": {
+                        "level": 5,
+                        "rate": 150.5
+                    }
+                },
+                {
+                    "threshold": {
+                        "level": 2,
+                        "rate": 200
+                    }
+                }
+            ]
+        },
+        "repeat": {
+            "days": {
+                "tue": 1,
+                "sat": 1
+            }
+        },
+        "rule_set_id": 1,
+        "dynamic_type": "P",
+        "apply_to": {
+            "items": [
+                {
+                    "id": 14
+                },
+                {
+                    "id": 16
+                },
+                {
+                    "id": 35
+                },
+                {
+                    "id": 36
+                },
+                {
+                    "id": 37
+                }
+            ],
+            "categories": [
+                {
+                    "id": 3
+                },
+                {
+                    "id": 5
+                }
+            ]
+        }
+    }
+}

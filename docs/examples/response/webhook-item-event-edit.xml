@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkfront-notify version="3.11.0.0" host="test.checkfront.com">
+    <type>rate</type>
+    <action>update</action>
+    <rate>
+        <rate_id>8</rate_id>
+        <name>Max 3 Days</name>
+        <start_date>20161221</start_date>
+        <end_date>0</end_date>
+        <span>0</span>
+        <price_src>Yield</price_src>
+        <dynamic_rate>10</dynamic_rate>
+        <status>A</status>
+        <type>SP</type>
+        <repeat_id>W</repeat_id>
+        <enabled>1</enabled>
+        <details>
+            <thresholds>
+                <threshold>
+                    <level>5</level>
+                    <rate>150.5</rate>
+                </threshold>
+                <threshold>
+                    <level>2</level>
+                    <rate>200</rate>
+                </threshold>
+            </thresholds>
+        </details>
+        <repeat>
+            <days>
+                <tue>1</tue>
+                <sat>1</sat>
+            </days>
+        </repeat>
+        <rule_set_id>1</rule_set_id>
+        <dynamic_type>P</dynamic_type>
+        <apply_to>
+            <items>
+                <id>14</id>
+                <id>16</id>
+                <id>35</id>
+                <id>36</id>
+                <id>37</id>
+            </items>
+            <categories>
+                <id>3</id>
+                <id>5</id>
+            </categories>
+        </apply_to>
+    </rate>
+</checkfront-notify>

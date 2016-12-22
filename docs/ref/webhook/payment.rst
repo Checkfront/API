@@ -1,7 +1,7 @@
 New Payment/Refund
 ^^^^^^^^^^^^^^^^^^
 
-This webhook is triggered whenever any transactions are added or refunded on your account.
+This webhook is triggered whenever any transactions are created or refunded on your account.
 
 A **JSON**, **XML**, or **x-www-form-urlencoded** object containing the following export fields can
 be found in directly in the **raw body** of the POST request to your server:
@@ -24,7 +24,7 @@ payment
 |                           |               | transaction                                       |
 +---------------------------+---------------+---------------------------------------------------+
 | **payment_mask**          | *integer*     | The last four digits of the card, or              |
-|                           |               | (POS) for a POS transaction.                      |
+|                           |               | (POS) for a POS transaction                       |
 +---------------------------+---------------+---------------------------------------------------+
 | **payment_type**          | *string*      | The type of card used, or the type of POS         |
 |                           |               | transaction                                       |
