@@ -10,6 +10,7 @@ API |release| Endpoints
 	category
 	company
 	customer
+	event
 	item
 	help
 	ping
