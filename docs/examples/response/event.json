@@ -1,0 +1,30 @@
+{
+    "rate_id": 8,
+    "name": "Max 3 Days",
+    "type": "SP",
+    "start_date": 20161221,
+    "end_date": 0,
+    "span": 0,
+    "price_src": "Yield",
+    "dynamic_rate": 10,
+    "dynamic_type": "P",
+    "status": "A",
+    "repeat_id": "W",
+    "enabled": 1,
+    "rule_set_id": 1,
+    "details": [
+        {
+            "level": 5,
+            "rate": 150.5
+        },
+        {
+            "level": 2,
+            "rate": 200
+        }
+    ],
+    "repeat": [ "tue", "sat" ],
+    "apply_to": {
+        "item_id": [ 14, 16, 35, 36, 37 ],
+        "category_id": [ 3, 5 ]
+    }
+}
