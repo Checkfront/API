@@ -37,6 +37,31 @@
                 }
             }
         },
+        "booking_policy":{
+            "body":"This is your <strong style='color: firebrick'>sample booking policy<\/strong>.  It's included in customer e-mails, your booking receipt page and in PDF print outs.\n\nYou can edit this policy by logging into your Checkfront account, and navigating to Manage \/ Layout \/ Invoice.",
+            "fields":{
+                "customer_tos_agree":{
+                    "value":0,
+                    "define":{
+                        "required":1,
+                        "layout":{
+                            "staff":{
+                                "invoice":1,
+                                "form":1,
+                                "required":0
+                            },
+                            "customer":{
+                                "invoice":1,
+                                "form":1,
+                                "required":1
+                            },
+                            "lbl":"I have read and agreed to the Terms of Service",
+                            "type":"checkbox"
+                        }
+                    }
+                }
+            }
+        },
         "customer_email": {
             "value": "",
             "define": {
