@@ -5,34 +5,68 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
-        "status": ""
+        "status": "OK",
+        "resource": "category",
+        "records": 6,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0028,
+        "method": "get"
     },
-    "query": false,
+    "query": [],
     "category": {
         "2": {
             "category_id": 2,
-            "name": "Accommodation",
-            "pos": 2,
-            "qty": 0,
-            "unit": "N"
+            "name": "Tours",
+            "description": "From Walking, to Bicycles, to Double Decker buses, we have the perfect tour for you and your family.",
+            "pos": 20,
+            "image": "/media/Lcat-2.jpg",
+            "qty": 4
         },
         "3": {
             "category_id": 3,
-            "name": "Tours",
-            "pos": 5,
-            "qty": 0,
-            "unit": "N"
+            "name": "Events",
+            "description": "Special Events brought to you by The London Experience. Follow us on Twitter to keep up to date!",
+            "pos": 18,
+            "image": "/media/Lcat-3.jpg",
+            "qty": 2
         },
         "4": {
             "category_id": 4,
-            "name": "Rentals",
-            "pos": 0,
-            "qty": 0,
-            "unit": "N"
+            "name": "Accommodations",
+            "description": "Book a Double or Single room for your overnight stay in Manchester.",
+            "pos": 17,
+            "image": "/media/Lcat-4.jpg",
+            "qty": 4
+        },
+        "5": {
+            "category_id": 5,
+            "name": "Gift Certificates",
+            "description": "Give the Gift of The London Experience.",
+            "pos": 16,
+            "image": "/media/Lcat-5.jpg",
+            "qty": 4
+        },
+        "6": {
+            "category_id": 6,
+            "name": "Activities",
+            "description": "",
+            "pos": 19,
+            "image": "/media/Lcat-6.jpg",
+            "qty": 3
+        },
+        "7": {
+            "category_id": 7,
+            "name": "Merchandise",
+            "description": "",
+            "pos": 14,
+            "image": "/media/Lcat-7.jpg",
+            "qty": 3
         }
     }
 }
