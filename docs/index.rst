@@ -2,7 +2,7 @@
 
 .. note::
 
-	**The v3.0 API documentation is a work in progress and subject to change.  If you are developing an application and have additional questions, or find any errors, please contact us for assistance.**
+	**The v3.0 API documentation is a work in progress and subject to change.  If you are developing an application and have additional questions, or find any errors, please `contact us <https://www.checkfront.com/contact>`_ for assistance.**
 
 
 =======================================
