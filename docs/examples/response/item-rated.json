@@ -22,7 +22,6 @@
     "query": {
         "start_date": "20171005",
         "end_date": "20171005",
-        "param_initially_empty": true,
         "param": {
             "qty": "1",
             "rooms": "1",
