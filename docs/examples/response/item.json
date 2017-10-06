@@ -2,11 +2,11 @@
     "version": "3.0",
     "account_id": 1,
     "host_id": "your-company.checkfront.com",
-    "name": "The London Experience - A Checkfront Company",
+    "name": "Your Company",
     "locale": {
-        "id": "en_GB",
+        "id": "en_US",
         "lang": "en",
-        "currency": "USD"
+        "currency": "CAD"
     },
     "request": {
         "status": "OK",
