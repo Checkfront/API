@@ -2,67 +2,63 @@
     "version": "3.0",
     "account_id": 1,
     "host_id": "your-company.checkfront.com",
-    "name": "Your Company",
+    "name": "The London Experience - A Checkfront Company",
     "locale": {
-        "id": "en_US",
-        "lang": "_en",
-        "currency": "CAD"
+        "id": "en_GB",
+        "lang": "en",
+        "currency": "USD"
     },
     "request": {
-        "id": "17",
-        "resource": "item",
-        "method": "get",
-        "records": 0,
         "status": "OK",
+        "resource": "item",
+        "id": "18",
+        "records": 0,
         "limit": 0,
         "page": 1,
         "pages": 1,
-        "time": 0.0011
+        "time": 0.0027,
+        "method": "get"
     },
-    "query": false,
+    "query": [],
     "item": {
-        "unit": "N",
-        "item_id": 17,
-        "sku": "overwaterbun",
+        "unit": "D",
+        "item_id": 18,
+        "sku": "bungeejumpingfromthetopoftheo2arena",
         "url": "",
         "lock": 1,
         "visibility": "*",
-        "name": "Overwater Room",
+        "name": "Bungee Jumping from the Top of the O2 Arena",
         "pos": 0,
-        "summary": "Nightly accommodation in one of our exclusive \"over-water\" bungalows.\r\n\r\nLocated over the turquoise waters of the Pearl of the Pacific and nicely decorated with wooden materials, each bungalow offers direct access to the lagoon and romantic views over Mount Otemanu.",
-        "details": "The Signature overwater bungalow at the Checkfront Polynesian Resort offers the unique experience of a breathtaking glass floor, the largest on the island of Bora Bora.\r\n\r\nEntirely renovated in 2010-2011 and combining contemporary and Polynesian designs, the new look of the bungalows embraces the three core values of the resort: chic, cultured & discovery.\r\n\r\nThe 50m² (540sqft) overwater bungalow features :flat screen TV with video on demand and music channel, telephone, mini bar, air conditioning, Wifi, safety box, tea & coffee facilities, furnished terrace, sofa bed.",
+        "summary": "<p>Take a trip to the top of London's most famous concert venue, the O2 Arena, and right back down again. This exhilarating chance of a lifetime starts with a tour through the Memorabilia Halls of the O2, and finishes with a 160 ft bungee jump. Days and space are limited, so book today!</p>",
+        "details": "",
+        "meta": "{\"display_mode\":\"dropdown\",\"item_package_rate\":\"\",\"delay\":0}",
+        "stock": 15,
         "unlimited": 0,
         "video": {
-            "id": "http://youtu.be/x6qpO4bt4cY",
+            "id": "B6MwTLgmFMM",
             "start": 0
         },
         "image": {
             "1": {
-                "date": 1392784780,
-                "title": "Outer Bungalow Interior View",
-                "src": "17-1--1392784780",
-                "src@2x": "17-1@2x--1392784780"
+                "title": "",
+                "src": "18-1--3942",
+                "path": "/media/M18-1--3942.jpg"
             },
             "2": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-2--1392784781",
-                "src@2x": "17-2@2x--1392784781"
-            },
-            "3": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-3--1392784781",
-                "src@2x": "17-3@2x--1392784781"
-            },
-            "4": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-4--1392784781",
-                "src@2x": "17-4@2x--1392784781"
+                "title": "",
+                "src": "18-2--9804",
+                "path": "/media/M18-2--9804.jpg"
             }
         },
-        "category_id": 2,
-        "rated": 1
+        "category_id": 6,
+        "rated": 1,
+        "product_group_type": "",
+        "product_group_children": "",
+        "type": "I",
+        "status": "A",
+        "alias_id": 0,
+        "len": 1,
+        "rules": "{\"param\":{\"adults\":{\"MIN\":\"0\",\"MAX\":\"0\"},\"children\":{\"MIN\":\"0\",\"MAX\":\"0\"}},\"fixed\":{\"start_time\":\"\"}}",
+        "category": "Activities"
     }
 }
