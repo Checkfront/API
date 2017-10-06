@@ -8,4 +8,4 @@ account
 .. literalinclude:: ../examples/response/account.json
 	:language: json
 	:linenos:
-	:emphasize-lines: 21-35
+	:emphasize-lines: 21-37
