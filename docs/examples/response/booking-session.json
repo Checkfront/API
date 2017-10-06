@@ -37,10 +37,10 @@
             "sub_total": "130.00",
             "tax_total": "0.00",
             "tax_inc_total": "0.00",
-            "discount": 0,
+            "discount": "0.00",
             "total": "130.00",
             "due": "130.00",
-            "paid_total": 0,
+            "paid_total": "0.00",
             "flat_discount": {
                 "total": 0,
                 "total_pretax": 0
@@ -48,7 +48,6 @@
             "deposit": null,
             "tax": [],
             "qty": 1,
-            "lock": 0,
             "item": {
                 "1": {
                     "sku": "bungeejumpingfromthetopoftheo2arena",
