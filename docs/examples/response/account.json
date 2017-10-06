@@ -5,32 +5,34 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
         "status": "OK",
         "resource": "account",
-        "records": 1,
+        "records": 5,
         "limit": 0,
         "page": 1,
         "pages": 1,
-        "time": 0.001,
+        "time": 0.0013,
         "method": "get"
     },
     "account": [
         {
             "account_id": 1,
-            "first_name": "Your",
-            "last_name": "Account",
+            "first_name": "Johnson",
+            "last_name": "Smith",
             "email": "support@checkfront.com",
             "mobile_phone": "",
-            "nickname": "You",
-            "login_id": "theboss",
+            "nickname": "John",
+            "login_id": "johnsmith",
             "enabled": 1,
-            "date_created": 1376344370,
-            "date_last_login": 1392315666,
-            "ip_last_login": "66.228.55.142"
+            "date_created": 1490573063,
+            "date_last_login": 1490573064,
+            "ip_last_login": "0.0.0.0",
+            "feed_token": "354629ce3117f34e0d7208d4847137f371deae824625ee1635009b7b88ed8804",
+            "partner": 0
         }
     ]
 }
