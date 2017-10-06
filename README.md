@@ -8,5 +8,5 @@
 
 Follow [@checkfront](http://twitter.com/checkfront) on Twitter for the latest news.
 
-Have questions on the API?  E-mail us at [code@checkfront.com](code@checkfront.com).
+Have questions on the API?  E-mail us at [code@checkfront.com](mailto:code@checkfront.com).
 
