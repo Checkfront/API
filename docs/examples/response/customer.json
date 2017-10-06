@@ -9,38 +9,38 @@
 	"currency": "CAD"
   },
     "request": {
-        "status": "OK",
-        "resource": "customer",
-        "records": 25,
-        "total_records": 6602,
-        "limit": 25,
-        "page": 1,
-        "pages": 265,
-        "time": 0.0062,
-        "method": "get"
+        "status": ""
     },
-    "customers": {
-	    "NQ2-039-421": {
-		    "customer_id": 25,
-		    "meta_id": null,
-		    "token": null,
-		    "code": "NQ2-039-421",
-		    "status_id": "ACTIVE",
-		    "created_date": null,
-		    "updated_date": null,
-		    "last_booking_date": null,
-		    "customer_name": "John Smith",
-		    "customer_email": "support@checkfront.com",
-		    "customer_email_optin": null,
-		    "customer_region": "BC",
-		    "customer_city": "Victoria",
-		    "customer_address": "386 Mews St",
-		    "customer_country": "0",
-		    "customer_postal_zip": "12345",
-		    "customer_phone": "0",
-		    "customer_crm_id": null,
-		    "notes": null,
-		    "referer": null
-		}
-	}
+    "customer": {
+        "customer_id": 25,
+        "meta_id": null,
+        "code": "NQ2-039-421",
+	"status_id": "ACTIVE",
+	"last_booking_date": null,
+	"customer_name": "John Smith",
+	"customer_email": "support@checkfront.com",
+	"customer_email_optin": null,
+	"customer_region": "BC",
+	"customer_city": "Victoria",
+	"customer_address": "386 Mews St",
+	"customer_country": "0",
+	"customer_postal_zip": "12345",
+	"customer_phone": "0",
+	"customer_crm_id": null,
+	"notes": null,
+        "meta": {
+            "source": false,
+            "diet": false,
+            "diet_allergies": false
+        },
+        "referer": null,
+        "bookings": {
+            "LZTM-290317": {
+                "created_date": "2017-03-29T23:54:18-07:00"
+            },
+            "XJZQ-020417": {
+                "created_date": "2017-04-02T23:19:29-07:00"
+            }
+        }
+    }
 }
