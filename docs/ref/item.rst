@@ -83,4 +83,4 @@ Rated Response
 .. literalinclude:: ../examples/response/item-rated.json
 	:language: json
 	:linenos:
-	:emphasize-lines: 101
+	:emphasize-lines: 130
