@@ -5,161 +5,218 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
-        "start_date": "next month",
-        "end_date": "next month  2days",
-        "param": {
-            "guests": "2"
-        },
-        "id": "17",
-        "resource": "item",
-        "method": "get",
-        "records": 0,
         "status": "OK",
+        "resource": "item",
+        "id": "18",
+        "records": 0,
         "limit": 0,
         "page": 1,
         "pages": 1,
-        "time": 0.0027
+        "time": 0.0101,
+        "method": "get"
     },
     "query": {
-        "start_date": "20140408",
-        "discount_code": false,
-        "giftcert_code": false,
-        "end_date": "20140410",
-        "exclude": false,
+        "start_date": "20171005",
+        "end_date": "20171005",
         "param": {
-            "guests": 2
+            "qty": "1",
+            "rooms": "1",
+            "adults": "1",
+            "children": "0",
+            "guests": "1",
+            "familyticket2ad": "1",
+            "familyticket": "4"
         },
-        "local_end_date": "04/10/2014",
-        "local_start_date": "04/08/2014"
+        "local_end_date": "10/05/17",
+        "local_start_date": "10/05/17"
     },
     "item": {
-        "unit": "N",
-        "item_id": 17,
-        "sku": "overwaterbun",
+        "unit": "D",
+        "item_id": 18,
+        "sku": "bungeejumpingfromthetopoftheo2arena",
         "url": "",
         "lock": 1,
         "visibility": "*",
-        "name": "Overwater Room",
+        "name": "Bungee Jumping from the Top of the O2 Arena",
         "pos": 0,
-        "summary": "Nightly accommodation in one of our exclusive \"over-water\" bungalows.\r\n\r\nLocated over the turquoise waters of the Pearl of the Pacific and nicely decorated with wooden materials, each bungalow offers direct access to the lagoon and romantic views over Mount Otemanu.",
-        "details": "The Signature overwater bungalow at the Checkfront Polynesian Resort offers the unique experience of a breathtaking glass floor, the largest on the island of Bora Bora.\r\n\r\nEntirely renovated in 2010-2011 and combining contemporary and Polynesian designs, the new look of the bungalows embraces the three core values of the resort: chic, cultured & discovery.\r\n\r\nThe 50m² (540sqft) overwater bungalow features :flat screen TV with video on demand and music channel, telephone, mini bar, air conditioning, Wifi, safety box, tea & coffee facilities, furnished terrace, sofa bed.",
+        "summary": "<p>Take a trip to the top of London's most famous concert venue, the O2 Arena, and right back down again. This exhilarating chance of a lifetime starts with a tour through the Memorabilia Halls of the O2, and finishes with a 160 ft bungee jump. Days and space are limited, so book today!</p>",
+        "details": "",
+        "meta": {
+            "display_mode": "dropdown",
+            "item_package_rate": "",
+            "delay": 0,
+            "default_len": 1
+        },
+        "stock": 15,
         "unlimited": 0,
         "video": {
-            "id": "http://youtu.be/x6qpO4bt4cY",
+            "id": "B6MwTLgmFMM",
             "start": 0
         },
         "image": {
             "1": {
-                "date": 1392784780,
-                "title": "Outer Bungalow Interior View",
-                "src": "17-1--1392784780",
-                "src@2x": "17-1@2x--1392784780"
+                "title": "",
+                "src": "18-1--3942",
+                "path": "/media/M18-1--3942.jpg"
             },
             "2": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-2--1392784781",
-                "src@2x": "17-2@2x--1392784781"
-            },
-            "3": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-3--1392784781",
-                "src@2x": "17-3@2x--1392784781"
-            },
-            "4": {
-                "date": 1392784781,
-                "title": false,
-                "src": "17-4--1392784781",
-                "src@2x": "17-4@2x--1392784781"
+                "title": "",
+                "src": "18-2--9804",
+                "path": "/media/M18-2--9804.jpg"
             }
         },
-        "category_id": 2,
+        "category_id": 6,
         "rated": 1,
+        "type": "I",
+        "status": "A",
+        "alias_id": 0,
+        "len": 1,
+        "rules": "{\"param\":{\"adults\":{\"MIN\":\"0\",\"MAX\":\"0\"},\"children\":{\"MIN\":\"0\",\"MAX\":\"0\"}},\"fixed\":{\"start_time\":\"\"}}",
+        "category": "Activities",
+        "package": [
+            {
+                "package_id": 21,
+                "optin": "O",
+                "select_package_params": 1
+            },
+            {
+                "package_id": 20,
+                "optin": "O",
+                "select_package_params": 1
+            },
+            {
+                "package_id": 19,
+                "optin": "O",
+                "select_package_params": 1
+            }
+        ],
         "param": {
-            "guests": {
-                "group": 0,
-                "lock": "1",
+            "adults": {
                 "price": 1,
-                "lbl": "Guests",
-                "def": 1,
+                "lbl": "Adults",
+                "lock": 1,
+                "qty": 1,
+                "hide": 0,
+                "customer_hide": 0,
                 "req": 1,
-                "hide": null,
                 "range": 1,
-                "qty": 2
+                "def": 1,
+                "MIN": 0,
+                "MAX": 0
+            },
+            "children": {
+                "price": 1,
+                "lbl": "Children",
+                "lock": 1,
+                "qty": 0,
+                "hide": 0,
+                "customer_hide": 0,
+                "req": 0,
+                "range": 1,
+                "def": 0,
+                "MIN": 0,
+                "MAX": 0
             }
         },
-        "times": null,
-        "times_days": null,
+        "qty": 1,
         "rate": {
             "status": "AVAILABLE",
-            "available": 4,
-            "slip": "17.20140408X2-guests.2",
+            "available": 9,
+            "slip": "18.20171005X1-adults.1-children.0",
             "summary": {
-                "title": "4 Available",
-                "details": "<strong>Guests:</strong> 2 x  2 Nights  @  $190.00",
+                "title": "9 Available",
+                "details": "<strong title="Adults">Adults:</strong> 1 Day @ $130.00",
                 "price": {
-                    "total": "$760.00",
-                    "title": "$190.00",
-                    "unit": "per night",
+                    "total": "$130.00",
+                    "title": "$110.00 - $130.00",
+                    "unit": "per day",
                     "param": {
-                        "guests": "$190.00"
+                        "adults": "$130.00",
+                        "children": "$110.00"
                     }
                 },
-                "span_desc": null,
-                "date": "Tue Apr  8 2014 - Wed Apr  9 2014"
+                "date": "Thu Oct 5, 2017"
             },
-            "sub_total": "760.00",
+            "sub_total": "130.00",
             "event": [
                 {
-                    "guests": {
-                        "amount": "190.00",
-                        "days": 2
+                    "adults": {
+                        "amount": 130,
+                        "days": 1,
+                        "type": "q",
+                        "range": "1-5"
+                    },
+                    "adults~1-5": {
+                        "amount": 130,
+                        "type": "q"
+                    },
+                    "adults~6-15": {
+                        "amount": 115,
+                        "type": "q"
+                    },
+                    "children": {
+                        "amount": 110,
+                        "days": 1,
+                        "type": "q"
+                    },
+                    "children~1-5": {
+                        "amount": 110,
+                        "type": "q"
+                    },
+                    "children~6-15": {
+                        "amount": 100,
+                        "type": "q"
                     }
                 }
             ],
-            "end_date": "20140409",
-            "start_date": "20140408",
+            "start_date": "20171005",
+            "end_date": "20171005",
             "dates": {
-                "20140408": {
+                "20171005": {
                     "status": "A",
                     "price": {
-                        "guests": "190.00"
+                        "adults": 130,
+                        "children": 110
                     },
-                    "dow": "2",
+                    "dow": "4",
                     "stock": {
-                        "T": 5,
-                        "B": 1,
-                        "A": 4
+                        "T": 15,
+                        "B": 6,
+                        "A": 9,
+                        "MinA": 9
                     },
-                    "rate": 0
-                },
-                "20140409": {
-                    "status": "A",
-                    "price": {
-                        "guests": "190.00"
-                    },
-                    "dow": "3",
-                    "stock": {
-                        "T": 5,
-                        "B": 1,
-                        "A": 4
-                    },
-                    "rate": 0
+                    "rates": [],
+                    "discount": [],
+                    "sub_total": 130
                 }
             }
         },
-        "days": 2,
-        "discount": null,
-        "discount_id": null,
-        "len": "0",
-        "stock": 5,
-        "gprice": "",
-        "local_start_date": "04/08/2014",
-        "local_end_date": "04/10/2014"
+        "days": 1,
+        "discount": {
+            "amount": 0
+        },
+        "gprice": {
+            "adults": {
+                "1-5": "q",
+                "6-15": "q"
+            },
+            "children": {
+                "1-5": "q",
+                "6-15": "q"
+            }
+        },
+        "local_start_date": "10/05/17",
+        "local_end_date": "10/05/17"
+    },
+    "events": {
+        "9": {
+            "name": "Group Booking",
+            "start_date": "",
+            "end_date": ""
+        }
     }
 }

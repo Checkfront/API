@@ -1,0 +1,134 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": "OK",
+        "resource": "booking",
+        "id": "session",
+        "records": 4,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0132,
+        "method": "get"
+    },
+    "booking": {
+        "session": {
+            "id": "60rq7eme0tmhlmpkeg2fb2p287",
+            "age": 0,
+            "summary": "Bungee Jumping from the Top of the O2 Arena",
+            "start_date": 1507186800,
+            "end_date": 1507186800,
+            "date_desc": "Thu Oct 5, 2017",
+            "time_desc": "",
+            "account_id": 1,
+            "partner_id": 0,
+            "currency_id": "CAD",
+            "sub_total": "130.00",
+            "tax_total": "0.00",
+            "tax_inc_total": "0.00",
+            "discount": "0.00",
+            "total": "130.00",
+            "due": "130.00",
+            "paid_total": "0.00",
+            "flat_discount": {
+                "total": 0,
+                "total_pretax": 0
+            },
+            "deposit": null,
+            "tax": [],
+            "qty": 1,
+            "item": {
+                "1": {
+                    "sku": "bungeejumpingfromthetopoftheo2arena",
+                    "item_id": 18,
+                    "name": "Bungee Jumping from the Top of the O2 Arena",
+                    "unit": "D",
+                    "rate": {
+                        "total": "130.00",
+                        "item_total": "130.00",
+                        "qty": 1,
+                        "summary": "<strong title="Adults">Adults:</strong> 1 Day @ $130.00"
+                    },
+                    "date": {
+                        "summary": "Thu Oct 5, 2017",
+                        "start_date": 1507186800,
+                        "end_date": 1507186800
+                    },
+                    "slip": "18.20171005X1-adults.1-children.0",
+                    "available": 9
+                },
+                "1.1": {
+                    "sku": "memorabiliaphoto",
+                    "item_id": 21,
+                    "name": "Memorabilia - Photo Package",
+                    "unit": "D",
+                    "rate": {
+                        "total": "18.00",
+                        "item_total": "0.00",
+                        "qty": 1,
+                        "summary": "$18.00"
+                    },
+                    "date": {
+                        "summary": "Thu Oct 5, 2017",
+                        "start_date": 1507186800,
+                        "end_date": 1507186800
+                    },
+                    "slip": "21.20171005X1-1",
+                    "available": 1000000000,
+                    "optin": "O",
+                    "opt": "out"
+                },
+                "1.2": {
+                    "sku": "thelondonexperiencet-hat",
+                    "item_id": 20,
+                    "name": "The London Experience Hat",
+                    "unit": "D",
+                    "rate": {
+                        "total": "15.00",
+                        "item_total": "0.00",
+                        "qty": 1,
+                        "summary": "$15.00"
+                    },
+                    "date": {
+                        "summary": "Thu Oct 5, 2017",
+                        "start_date": 1507186800,
+                        "end_date": 1507186800
+                    },
+                    "slip": "20.20171005X1-1",
+                    "available": 1000000000,
+                    "optin": "O",
+                    "opt": "out"
+                },
+                "1.3": {
+                    "sku": "thelondonexperiencet-shirt",
+                    "item_id": 19,
+                    "name": "The London Experience Mini-Bus",
+                    "unit": "D",
+                    "rate": {
+                        "total": "25.00",
+                        "item_total": "0.00",
+                        "qty": 1,
+                        "summary": "$25.00"
+                    },
+                    "date": {
+                        "summary": "Thu Oct 5, 2017",
+                        "start_date": 1507186800,
+                        "end_date": 1507186800
+                    },
+                    "slip": "19.20171005X1-1",
+                    "available": 1000000000,
+                    "optin": "O",
+                    "opt": "out"
+                }
+            }
+        }
+    }
+}

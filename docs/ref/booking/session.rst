@@ -21,7 +21,7 @@ To start a new session, you simply pass in the booking :ref:`slip`\s returned wh
 
 	:query string session_id: The session ID to read information from.  *Can also be sent as a cookie.*
 	
-.. literalinclude:: ../../examples/response/session.json
+.. literalinclude:: ../../examples/response/booking-session.json
 	:language: json
 	:linenos:
 	:emphasize-lines: 24

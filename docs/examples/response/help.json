@@ -5,36 +5,37 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
         "status": "OK",
         "resource": "help",
-        "records": 13,
+        "records": 15,
         "limit": 0,
         "page": 1,
         "pages": 1,
-        "time": 0.0004,
+        "time": 0.001,
         "method": "get"
     },
     "help": {
         "resources": [
-            "ui",
-            "slip",
-            "item",
-            "category",
-            "booking",
-            "customer",
-            "session",
-            "company",
+            "ping",
             "help",
+            "company",
             "account",
             "status",
             "mobile",
-            "ping"
+            "customer",
+            "ui",
+            "item",
+            "stock",
+            "category",
+            "booking",
+            "import",
+            "discount",
+            "event"
         ],
-        "msg": "For help on a resource call help/item",
-        "see": "http://checkfront.github.io/API/"
+        "see": "http://api.checkfront.com/"
     }
 }

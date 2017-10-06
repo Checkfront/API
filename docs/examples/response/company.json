@@ -4,35 +4,46 @@
     "host_id": "your-company.checkfront.com",
     "name": "Your Company",
     "locale": {
-        "id": "en_US",
-        "lang": "_en",
+        "id": "en_GB",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
-        "status": ""
+        "status": "OK",
+        "resource": "company",
+        "records": 19,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0016,
+        "method": "get"
     },
-    "query": false,
-    "category": {
-        "2": {
-            "category_id": 2,
-            "name": "Accommodation",
-            "pos": 2,
-            "qty": 0,
-            "unit": "N"
-        },
-        "3": {
-            "category_id": 3,
-            "name": "Tours",
-            "pos": 5,
-            "qty": 0,
-            "unit": "N"
-        },
-        "4": {
-            "category_id": 4,
-            "name": "Rentals",
-            "pos": 0,
-            "qty": 0,
-            "unit": "N"
+    "company": {
+        "url": "your-company.checkfront.com",
+        "name": "Your Company",
+        "plan_id": 1,
+        "email": "hello@checkfront.com",
+        "address": "",
+        "city": "",
+        "postal_zip": "",
+        "region": "LND",
+        "country_id": "CA",
+        "currency_id": "CAD",
+        "timezone": "Canada/Pacific",
+        "locale_id": "en_GB",
+        "lang_id": "en",
+        "date_format": "%m/%d/%y",
+        "time_format": "%I:%M %p",
+        "phone": "",
+        "utc_offset": -7,
+        "currency": {
+            "symbol": "$",
+            "symbol_space": 0,
+            "symbol_precedes": 1,
+            "decimals": 2,
+            "decimal_separator": ".",
+            "thousands_separator": ","
         }
-    }
+    },
+    "hours": false
 }

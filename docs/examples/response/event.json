@@ -1,30 +1,80 @@
 {
-    "rate_id": 8,
-    "name": "Max 3 Days",
-    "type": "SP",
-    "start_date": 20161221,
-    "end_date": 0,
-    "span": 0,
-    "price_src": "Yield",
-    "dynamic_rate": 10,
-    "dynamic_type": "P",
-    "status": "A",
-    "repeat_id": "W",
-    "enabled": 1,
-    "rule_set_id": 1,
-    "details": [
-        {
-            "level": 5,
-            "rate": 150.5
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_US",
+        "lang": "en",
+        "currency": "CAD"
+    },
+    "request": {
+        "path": [
+            "event"
+        ],
+        "resource": "event",
+        "records": 6,
+        "total_records": 6,
+        "status": "OK",
+        "limit": 100,
+        "page": 1,
+        "pages": 1,
+        "time": 0.0028,
+        "method": "get"
+    },
+    "events": {
+        "1": {
+            "rate_id": 1,
+            "name": "Max 3 Days",
+            "type": "SP",
+            "start_date": 20161221,
+            "end_date": 0,
+            "span": 0,
+            "price_src": "Yield",
+            "dynamic_rate": 10,
+            "dynamic_type": "P",
+            "status": "A",
+            "repeat_id": "W",
+            "enabled": 1,
+            "rule_set_id": 1,
+            "details": [
+                {
+                    "level": 5,
+                    "rate": 150.5
+                },
+                {
+                    "level": 2,
+                    "rate": 200
+                }
+            ],
+            "repeat": [ "tue", "sat" ],
+            "apply_to": {
+                "item_id": [ 14, 16, 35, 36, 37 ],
+                "category_id": [ 3, 5 ]
+            }
         },
-        {
-            "level": 2,
-            "rate": 200
+        "2": {
+            "rate_id": 2,
+            "name": "Easter Closure",
+            "type": "SE",
+            "start_date": "20170417",
+            "end_date": "20170417",
+            "span": 0,
+            "price_src": "",
+            "dynamic_rate": "0.0000",
+            "dynamic_type": "P",
+            "status": "U",
+            "repeat_id": "",
+            "enabled": 1,
+            "rule_set_id": 1,
+            "details": [],
+            "repeat": [],
+            "apply_to": {
+                "item_id": [
+                    "all"
+                ],
+                "category_id": []
+            }
         }
-    ],
-    "repeat": [ "tue", "sat" ],
-    "apply_to": {
-        "item_id": [ 14, 16, 35, 36, 37 ],
-        "category_id": [ 3, 5 ]
     }
 }

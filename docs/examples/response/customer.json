@@ -1,39 +1,46 @@
 {
-  "version": "3.0",
-  "account_id": 1,
-  "host_id": "test.checkfront.com",
-  "name": "test",
-  "locale": {
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
 	"id": "en_CA",
 	"lang": "en",
 	"currency": "CAD"
-  },
-  "request": {
-	"status": ""
-  },
-  "customer": {
-	"customer_id": 6,
-	"code": "LF5-965-746",
+    },
+    "request": {
+        "status": ""
+    },
+    "customer": {
+        "customer_id": 25,
+        "meta_id": null,
+        "code": "NQ2-039-421",
 	"status_id": "ACTIVE",
-	"customer_name": "Testy McTestface",
-	"customer_email": "test@checkfront.com",
+	"last_booking_date": null,
+	"customer_name": "John Smith",
+	"customer_email": "support@checkfront.com",
+	"customer_email_optin": null,
 	"customer_region": "BC",
 	"customer_city": "Victoria",
-	"customer_address": "123 Fake Street",
-	"customer_country": "CA",
-	"customer_postal_zip": "V8R 5G0",
-	"customer_phone": "+12505555555",
-	"meta": {
-	  "staff_comment": "Loves the color green",
-	  "customer_account_id": ""
-	},
-	"bookings": {
-	  "ABCD-080915": {
-		"created_date": "2015-09-08T19:05:21-08:00"
-	  },
-	  "EFGH-111016": {
-		"created_date": "2016-10-11T15:28:34-08:00"
-	  }
-	}
-  }
+	"customer_address": "386 Mews St",
+	"customer_country": "0",
+	"customer_postal_zip": "12345",
+	"customer_phone": "0",
+	"customer_crm_id": null,
+	"notes": null,
+        "meta": {
+            "source": false,
+            "diet": false,
+            "diet_allergies": false
+        },
+        "referer": null,
+        "bookings": {
+            "LZTM-290317": {
+                "created_date": "2017-03-29T23:54:18-07:00"
+            },
+            "XJZQ-020417": {
+                "created_date": "2017-04-02T23:19:29-07:00"
+            }
+        }
+    }
 }
