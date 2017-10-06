@@ -32,4 +32,4 @@ booking/index
 	.. literalinclude:: ../../examples/response/booking-index.json
 		:language: json
 		:linenos:
-		:emphasize-lines: 23-39
+		:emphasize-lines: 27-45
