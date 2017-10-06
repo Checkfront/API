@@ -11,7 +11,7 @@
     "request": {
         "status": "OK",
         "resource": "account",
-        "records": 5,
+        "records": 1,
         "limit": 0,
         "page": 1,
         "pages": 1,
