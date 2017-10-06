@@ -5,36 +5,42 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
-        "status": "OK",
-        "resource": "booking",
+        "path": [
+            "booking",
+            "index"
+        ],
         "id": "index",
-        "method": "get",
-        "records": 1,
-        "total_records": 1,
+        "resource": "booking",
+        "records": 100,
+        "total_records": 11985,
+        "status": "OK",
         "limit": 100,
         "page": 1,
-        "pages": 1,
-        "time": 0.0003
+        "pages": 120,
+        "time": 0.0501,
+        "method": "get"
     },
     "booking/index": {
-        "3149": {
-            "booking_id": 3149,
-            "code": "PVCA-050314",
-            "status_id": "PAID",
-            "status_name": "Paid",
-            "created_date": 1394079749,
-            "total": "141.90",
-            "tax_total": "12.90",
-            "paid_total": "141.90",
-            "customer_name": "Your Customer",
-            "customer_email": "support@checkfront.com",
-            "summary": "Islands Snorkeling Tour",
-            "date_desc": "Wed Mar  5, 2014",
-            "token": "57c2ac0a58dc02a72df50a8841b1c8a190627ff69a2435060a3ed3d469819477"
+        "2": {
+            "booking_id": 2,
+            "code": "CFPP-290317",
+            "status_id": "PEND",
+            "status_name": "Pending",
+            "created_date": 1490854462,
+            "total": "80.40",
+            "tax_total": "13.40",
+            "paid_total": "0.00",
+            "customer_id": 3,
+            "customer_name": "Bridgette Hammes",
+            "customer_email": "bridgette@example.com",
+            "summary": "Walking Tour with a Taste of London, The London Experience Hat, The London Experience Mini-Bus",
+            "date_desc": "Sun Dec 24, 2017",
+            "tid": "",
+            "token": "b93eb6589f3ac8bdfca07f26dbe1a73ff6354620a51d8609a54a6697e686567f"
         }
     }
 }
