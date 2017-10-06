@@ -5,7 +5,7 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
     "request": {
@@ -15,13 +15,13 @@
         "limit": 0,
         "page": 1,
         "pages": 1,
-        "time": 0.0005,
+        "time": 0.0009,
         "method": "get"
     },
     "pong": {
-        "remote_addr": "66.228.55.142",
-        "time": 1394268118,
+        "remote_addr": "0.0.0.0",
+        "time": 1507249065,
         "timezone": "Canada/Pacific",
-        "provider": "API"
+        "provider": "API Console"
     }
 }
