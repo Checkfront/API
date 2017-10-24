@@ -33,6 +33,12 @@ Example of adding a :ref:`slip` to a *new* session:
 	
 	slip[]=17.20141224X8-guests.2&slip[]=18.20141224X8-guests.2
 
+.. note::
+	For parent/child grouped items, the parent item functions as a container for the child items. As such, the request to obtain the SLIP must be made directly to the child item, rather than the parent.
+
+	Once the SLIP has been obtained, it can be added to the booking session as outlined above.
+
+
 Alter Items in the Session
 --------------------------
 
