@@ -33,7 +33,7 @@ Finding Help
 If you're looking for help figuring out how to get your application working, or just have something you want to ask about, there are a few places you can get in touch with us:
 
 * Contact us directly through the support link in your Checkfront account.
-* Talk with other developers on `our forum <http://www.checkfront.com/forum/>`_.
+* Talk with other developers on `our forum <https://www.checkfront.com/forum/categories/developers>`_.
 * Fork us (and contribute!) on `GitHub.com/Checkfront <https://github.com/Checkfront>`_.
 
 
@@ -46,6 +46,6 @@ When the rate limit is exceeded Checkfront will send an HTTP 503 status code.  T
 
 Terms of Service
 ----------------
-Use of this API is strictly bound by the terms as specified in `Checkfront API Terms of Service <http://www.checkfront.com/terms/#api>`_.
+Use of this API is strictly bound by the terms as specified in `Checkfront API Terms of Service <http://www.checkfront.com/terms/#_api>`_.
 
 Some functionality documented here may not be available to you based on your plan, or access level of your account.
