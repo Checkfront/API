@@ -51,19 +51,19 @@ booking.customer
 	+===========================+==================+============================================================================+
 	| **code**                  | *string*         | The customer's unique account code                                         |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_name**         | *string*         | The customer's full name                                                   |
+	| **name**                  | *string*         | The customer's full name                                                   |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_email**        | *string*         | The customer's email address                                               |
+	| **email**                 | *string*         | The customer's email address                                               |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_address**      | *string*         | The customer's street address                                              |
+	| **address**               | *string*         | The customer's street address                                              |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_region**       | *string*         | The customer's province or state                                           |
+	| **region**                | *string*         | The customer's province or state                                           |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_country**      | *string*         | The customer's country of residence                                        |
+	| **country**               | *string*         | The customer's country of residence                                        |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_postal_zip**   | *string*         | The customer's postal or zip code                                          |
+	| **postal_zip**            | *string*         | The customer's postal or zip code                                          |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **customer_phone**        | *string*         | The customer's phone number                                                |
+	| **phone**                 | *string*         | The customer's phone number                                                |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
 
 .. _note-booking-fields:
