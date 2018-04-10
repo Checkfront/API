@@ -2,7 +2,7 @@
 
 # [Checkfront API v3.0](http://api.checkfront.com/)
 
-**The v3.0 API and documenation is a work in progress.  Read the documentation at [api.checkfront.com](http://api.checkfront.com/).**
+**Documenation for our v3.0 API, which can be found at [api.checkfront.com](http://api.checkfront.com/).**
 
 ---
 
