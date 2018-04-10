@@ -11,14 +11,14 @@
         <end_date>1394128800</end_date>
         <customer>
             <code>BT5-386-579</code>
-            <customer_name>Your Customer</customer_name>
-            <customer_email>support@checkfront.com</customer_email>
-            <customer_region>BC</customer_region>
-            <customer_address>170-422 Richards Street</customer_address>
-            <customer_city>Vancouver</customer_city>
-            <customer_country>CA</customer_country>
-            <customer_phone>1 (800) 559-0985</customer_phone>
-            <customer_postal_zip>V6B 2Z4</customer_postal_zip>
+            <name>Your Customer</name>
+            <email>support@checkfront.com</email>
+            <region>BC</region>
+            <address>170-422 Richards Street</address>
+            <city>Vancouver</city>
+            <country>CA</country>
+            <phone>1 (800) 559-0985</phone>
+            <postal_zip>V6B 2Z4</postal_zip>
         </customer>
         <fields>
             <customer_name>Your Customer</customer_name>
