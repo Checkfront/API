@@ -267,3 +267,8 @@ texinfo_documents = [
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 lexers['php'] = PhpLexer(startinline=True)
+
+
+# Add custom CSS support
+def setup(app):
+    app.add_stylesheet('css/custom.css')
