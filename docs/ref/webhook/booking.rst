@@ -49,6 +49,8 @@ booking.customer
 	+---------------------------+------------------+----------------------------------------------------------------------------+
 	| Field                     | Type             | Description                                                                |
 	+===========================+==================+============================================================================+
+	| **code**                  | *string*         | The customer's unique account code                                         |
+	+---------------------------+------------------+----------------------------------------------------------------------------+
 	| **name**                  | *string*         | The customer's full name                                                   |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
 	| **email**                 | *string*         | The customer's email address                                               |
@@ -63,6 +65,12 @@ booking.customer
 	+---------------------------+------------------+----------------------------------------------------------------------------+
 	| **phone**                 | *string*         | The customer's phone number                                                |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
+
+.. _note-booking-fields:
+
+booking.fields
+~~~~~~~~~~~~~~
+		Contains each of the form fields associated with a booking.
 
 .. _note-booking-order:
 
@@ -93,7 +101,7 @@ booking.order
 
 booking.order.items.item
 ~~~~~~~~~~~~~~~~~~~~~~~~
-		An entry for *each* item in the booking exists will contain following fields:
+		An entry for *each* item in the booking will contain following fields:
 
 		+---------------------------+------------------+------------------------------------------------------------------------+
 		| Field                     | Type             | Description                                                            |
