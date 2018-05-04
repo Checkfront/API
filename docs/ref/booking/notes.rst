@@ -1,6 +1,6 @@
 booking/notes
 --------------
-This is a call to your Checkfront account that pulls all the notes from all of your bookings within a certain time frame. By default this will pull all notes from all your bookings in the system. 
+This is a call to your Checkfront account that pulls all the notes from all of your bookings. This defaults to pulling all the notes from your bookings for the past thirty days. 
 
 .. http:post:: /api/3.0/booking/notes
 
@@ -8,7 +8,7 @@ This is a call to your Checkfront account that pulls all the notes from all of y
 
 	:>jsonarr integer note_ID: the ID of the note on that booking.
 	:>jsonarr integer account_ID: The ID of the account that made the note. Customer booking notes appear as account ID 0.
-	:>jsonarr string date: The date the note was created. It appears in the format "YYYY-MM-DDtHH:MM:SS-??:??"
+	:>jsonarr string date: The date the note was created. It appears in the format "YYYY-MM-DDtHH:MM:SS-07:00"
 	:>jsonarr string body: The body of the note.
 	:>jsonarr bool private: Whether this note is seen on the invoice or not. True is not shown on the invoice, false is shown on the invoice.
 	:>jsonarr string booking_id: The booking ID the note is found on.
