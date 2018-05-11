@@ -1,0 +1,41 @@
+{
+    "version": "3.0",
+    "account_id": 1,
+    "host_id": "your-company.checkfront.com",
+    "name": "Your Company",
+    "locale": {
+        "id": "en_CA",
+        "lang": "en",
+        "currency": "CAD"
+    },
+    "request": {
+        "status": "OK",
+        "resource": "booking",
+        "id": "notes",
+        "records": 26,
+        "limit": 0,
+        "page": 1,
+        "pages": 1,
+        "time": 0.003,
+        "timestamp": 1524984437.018568,
+        "method": "get"
+    },
+    "notes": [
+        {
+            "note_id": 1,
+            "account_id": 0,
+            "date": "2018-04-26T17:40:25-07:00",
+            "body": "Quis error quo molestias rerum",
+            "private": false,
+            "booking_id": "PSGS-260418"
+        },
+        {
+            "note_id": 3,
+            "account_id": 1,
+            "date": "2018-04-21T23:30:19-07:00",
+            "body": "test 2",
+            "private": true,
+            "booking_id": "LLXF-230318"
+        }
+    ]
+}
