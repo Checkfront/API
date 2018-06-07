@@ -5,7 +5,7 @@
     "name": "Your Company",
     "locale": {
         "id": "en_US",
-        "lang": "_en",
+        "lang": "en",
         "currency": "CAD"
     },
      "request": {
