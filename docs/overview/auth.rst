@@ -19,9 +19,9 @@ Token Authentication
 
 OAuth2 Authentication
 ~~~~~~~~~~~~~~~~~~~~~
-**OAuth2** is a secure `open standard <http://tools.ietf.org/html/rfc6749>`_ providing a simple transparent avenue of authenticating with the API.  Using this method of authentication can allow your application to act on behalf of individual members of your staff by allowing them to "log in" and grant permission to the app.  This is ideal for any case where you want to allow your staff to (for example) make or change bookings in the system.
+**OAuth2** is a secure `open standard <https://tools.ietf.org/html/rfc6749>`_ providing a simple transparent avenue of authenticating with the API.  Using this method of authentication can allow your application to act on behalf of individual members of your staff by allowing them to "log in" and grant permission to the app.  This is ideal for any case where you want to allow your staff to (for example) make or change bookings in the system.
 
-Please see `our SDKs <https://github.com/Checkfront>`_ or support libraries for `OAuth2 <http://oauth.net/2/>`_ in your preferred environment.  If we don't have an example for your language, there are `many libraries <http://oauth.net/2/>`_ and documentation available for various programming languages that provide all the functionality you'll need to implement a custom OAuth2 solution.
+Please see `our SDKs <https://github.com/Checkfront>`_ or support libraries for `OAuth2 <https://oauth.net/2/>`_ in your preferred environment.  If we don't have an example for your language, there are `many libraries <https://oauth.net/2/>`_ and documentation available for various programming languages that provide all the functionality you'll need to implement a custom OAuth2 solution.
 
 Obtaining API Credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^
