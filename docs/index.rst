@@ -9,7 +9,7 @@
 Welcome to the Checkfront Developer API
 =======================================
 
-The **Checkfront API** allows developers to expand and build on the `Checkfront Booking Platform <http://www.checkfront.com?cfcp=api>`_.  The API makes it easy to create web, desktop & mobile applications that directly integrate and interact with your Checkfront account.
+The **Checkfront API** allows developers to expand and build on the `Checkfront Booking Platform <https://www.checkfront.com?cfcp=api>`_.  The API makes it easy to create web, desktop & mobile applications that directly integrate and interact with your Checkfront account.
 
 This API is built around open standards and secure technologies to streamline development and maintain the integrity of your data.
 
@@ -57,4 +57,4 @@ Reference
 
 
 .. |Checkfront| image:: https://www.checkfront.com/images/logo/Checkfront-80.png
-.. _Checkfront: http://www.checkfront.com/?cfcp=api
+.. _Checkfront: https://www.checkfront.com/?cfcp=api
