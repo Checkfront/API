@@ -42,7 +42,7 @@ Specifying the ``status_id`` is **required**, but any other update fields are op
 	:param string booking_id: The unique booking code identifying a booking in the system.
 	:query string status_id: The status that this booking should be set to. See **Manage / Layout / Statuses** in your account for a list of all available statuses. The default available statuses are: **PEND, HOLD, PART, PAID, WAIT, STOP,** and **VOID**
 	
-	:query boolean notify: Toggle whether to trigger notifications when this booking is changed. (default: 1)
+	:query boolean notify: Toggle whether to trigger notifications when this booking is changed. (default: false)
 	:query boolean set_paid: When set to **1** (true) on an *unpaid* booking, and the requested status_id is '**PAID**', attempt to create a POS transaction covering the remaining cost of the booking (cannot be used with other input).
 
 booking/[booking_id]/bookmark
