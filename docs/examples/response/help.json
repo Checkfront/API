@@ -11,7 +11,7 @@
     "request": {
         "status": "OK",
         "resource": "help",
-        "records": 15,
+        "records": 13,
         "limit": 0,
         "page": 1,
         "pages": 1,
@@ -24,17 +24,15 @@
             "help",
             "company",
             "account",
-            "status",
-            "mobile",
             "customer",
-            "ui",
             "item",
             "stock",
             "category",
             "booking",
-            "import",
             "discount",
-            "event"
+            "event",
+            "giftcert",
+            "inventory"
         ],
         "see": "http://api.checkfront.com/"
     }
