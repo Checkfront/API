@@ -5,7 +5,7 @@
     "action": "update",
     "item": {
         "unit": "30M",
-        "item_id": "test-item",
+        "item_id": "40",
         "url": "",
         "lock": 1,
         "visibility": "*",

@@ -26,15 +26,8 @@
             "description": "From Walking, to Bicycles, to Double Decker buses, we have the perfect tour for you and your family.",
             "pos": 20,
             "image": "/media/Lcat-2.jpg",
-            "qty": 4
-        },
-        "3": {
-            "category_id": 3,
-            "name": "Events",
-            "description": "Special Events brought to you by The London Experience. Follow us on Twitter to keep up to date!",
-            "pos": 18,
-            "image": "/media/Lcat-3.jpg",
-            "qty": 2
+            "image_url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/Lcat-2?t=1522874544771961",
+            "qty": 5
         },
         "4": {
             "category_id": 4,
@@ -42,6 +35,7 @@
             "description": "Book a Double or Single room for your overnight stay in Manchester.",
             "pos": 17,
             "image": "/media/Lcat-4.jpg",
+            "image_url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/Lcat-4?t=1522874547513165",
             "qty": 4
         },
         "5": {
@@ -50,6 +44,7 @@
             "description": "Give the Gift of The London Experience.",
             "pos": 16,
             "image": "/media/Lcat-5.jpg",
+            "image_url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/Lcat-5?t=1522874548913993",
             "qty": 4
         },
         "6": {
@@ -58,6 +53,7 @@
             "description": "",
             "pos": 19,
             "image": "/media/Lcat-6.jpg",
+            "image_url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/Lcat-6?t=1522874550706040",
             "qty": 3
         },
         "7": {
@@ -66,6 +62,7 @@
             "description": "",
             "pos": 14,
             "image": "/media/Lcat-7.jpg",
+            "image_url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/Lcat-7?t=1522874552392653",
             "qty": 3
         }
     }

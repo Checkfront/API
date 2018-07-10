@@ -33,7 +33,7 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **pos**                   | *integer*     | The sort order integer.                              |
 +---------------------------+---------------+------------------------------------------------------+
-| **Meta**                  | *object*      | Contains meta details for the item. This changes     |
+| **meta**                  | *object*      | Contains meta details for the item. This changes     |
 |                           |               | based on the add-ons and data for the item.          |
 +---------------------------+---------------+------------------------------------------------------+
 | **stock**                 | *integer*     | The item's inventory.                                |
@@ -55,12 +55,12 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_type**    | *string*      | The type of item this is in a Product Group.         |
 |                           |               |                                                      |
-|                           |               | P is for Parent.                                     |
+|                           |               | P is for Parent, C is child.                         |
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_children**| *object*      | Contains the Item object of the items that are       |
 |                           |               | children of the main item.                           |
 +---------------------------+---------------+------------------------------------------------------+
-| **type**                  | *string*      |                                                      |
+| **type**                  | *string*      | Determines if this is an Item or a Gift Certificate. |
 +---------------------------+---------------+------------------------------------------------------+
 | **status**                | *string*      | This is the availability status for the item.        |
 +---------------------------+---------------+------------------------------------------------------+
@@ -96,9 +96,9 @@ item.image
 +---------------------------+---------------+------------------------------------------------------+
 | Field                     | Type          | Description                                          |
 +===========================+===============+======================================================+
-| **#**                     | *integer*     | The number of the image on the item. The images are  |
-|                           |               | numbered in the order they were uploaded, but ordered|
-|                           |               | in the order they display on the item.               |
+| **#**                     | *integer*     | The index of the image. The images are numbered in   |
+|                           |               | the order they were uploaded, but are organized      |
+|                           |               | in the order they are displayed on the item.         |
 +---------------------------+---------------+------------------------------------------------------+
 
 .. _note-item-image-images:
@@ -113,8 +113,8 @@ item.image.images
 | **path**                  | *string*      | The identifying path to where the image is found     |
 |                           |               | relative to your Checkfront Account URL.             |
 +---------------------------+---------------+------------------------------------------------------+
-| **url**                   | *string*      | The identifying path to where the image is found     |
-|                           |               | on the server.                                       |
+| **url**                   | *string*      | The identifying path to where a full sized version   |
+|                           |               |  image is found on the server.                       |
 +---------------------------+---------------+------------------------------------------------------+
 | **url_medium**            | *string*      | The identifying path to where a medium version of the|
 |                           |               | image is found on the server.                        |
@@ -124,7 +124,7 @@ item.image.images
 +---------------------------+---------------+------------------------------------------------------+
 
 
-Sample Rate Notification
+Sample Item Update Notification
 ------------------------
 
 JSON
