@@ -12,18 +12,6 @@ Item
 | Field                     | Type          | Description                                          |
 +===========================+===============+======================================================+
 | **unit**                  | *string*      | The allocation type for the item.                    |
-|                           |               |                                                      |
-|                           |               | - D is for Daily.                                    |
-|                           |               |                                                      |
-|                           |               | - N is for Nightly.                                  |
-|                           |               |                                                      |
-|                           |               | - ##M is for sub-hourly, with #                      |
-|                           |               |   representing the number of minutes.                |
-|                           |               |                                                      |
-|                           |               | - H is Hourly.                                       |
-|                           |               |                                                      |
-|                           |               | - TS is Timeslots.                                   |
-|                           |               |                                                      |
 +---------------------------+---------------+------------------------------------------------------+
 | **sku**                   | *string*      | The item's SKU                                       |
 +---------------------------+---------------+------------------------------------------------------+
@@ -31,9 +19,7 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **lock**                  | *integer*     | If the item has Date Based Inventory control active. |
 |                           |               |                                                      |
-|                           |               | - 0 Date-based inventory is disabled.                |
-|                           |               |                                                      |
-|                           |               | - 1 Date-based inventory is enabled.                 |
+|                           |               | 0 means that Date-based inventory is disabled.       |
 +---------------------------+---------------+------------------------------------------------------+
 | **visibility**            | *string*      | The visibility of this item on the booking page.     |
 |                           |               |                                                      |
@@ -47,16 +33,15 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **pos**                   | *integer*     | The sort order integer.                              |
 +---------------------------+---------------+------------------------------------------------------+
-| **Meta**                  | *object*      | See :ref:`note-item-meta` below.                     |
+| **Meta**                  | *object*      | Contains meta details for the item. This changes     |
+|                           |               | based on the add-ons and data for the item.          |
 +---------------------------+---------------+------------------------------------------------------+
 | **stock**                 | *integer*     | The item's inventory.                                |
 +---------------------------+---------------+------------------------------------------------------+
 | **unlimited**             | *integer*     | This returns if the item's inventory is unlimited or |
 |                           |               | not.                                                 |
 |                           |               |                                                      |
-|                           |               | - 0 for limited inventory                            |
-|                           |               |                                                      |
-|                           |               | - 1 for unlimited inventory                          |
+|                           |               | 0 means the inventory is limited.                    |
 +---------------------------+---------------+------------------------------------------------------+
 | **video**                 | *object*      | See :ref:`note-item-video` below.                    |
 +---------------------------+---------------+------------------------------------------------------+
@@ -66,13 +51,11 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **rated**                 | *integer*     | If this item is simple or not.                       |
 |                           |               |                                                      |
-|                           |               | - 0 if the item is simple.                           |
-|                           |               |                                                      |
-|                           |               | - 1 if it is regular.                                |
+|                           |               | 0 means the item is simple.                          |
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_type**    | *string*      | The type of item this is in a Product Group.         |
 |                           |               |                                                      |
-|                           |               | - P for Parent.                                      |
+|                           |               | P is for Parent.                                     |
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_children**| *object*      | Contains the Item object of the items that are       |
 |                           |               | children of the main item.                           |
@@ -80,32 +63,17 @@ Item
 | **type**                  | *string*      |                                                      |
 +---------------------------+---------------+------------------------------------------------------+
 | **status**                | *string*      | This is the availability status for the item.        |
-|                           |               |                                                      |
-|                           |               | - A for Available.                                   |
-|                           |               |                                                      |
-|                           |               | - U for Unavailable.                                 |
 +---------------------------+---------------+------------------------------------------------------+
 | **alias_id**              | *integer*     | The ID of the item this is aliased too. This will not|
 |                           |               | show the ID of items aliased to this item.           |
 +---------------------------+---------------+------------------------------------------------------+
 | **len**                   | *integer*     | The fixed length of the item.                        |
 +---------------------------+---------------+------------------------------------------------------+
-| **rules**                 | *object*      | See :ref:`note-item-rules` below.                    |
+| **rules**                 | *object*      | Contains the item's parameters, fixed length,        |
+|                           |               | and attribute specific rules such as default length  |
+|                           |               | start time, etc.                                     |
 +---------------------------+---------------+------------------------------------------------------+
 | **category**              | *string*      | The name of the category this item is in.            |
-+---------------------------+---------------+------------------------------------------------------+
-
-.. _note-item-meta:
-
-item.meta
-------------
-+---------------------------+---------------+------------------------------------------------------+
-| Field                     | Type          | Description                                          |
-+===========================+===============+======================================================+
-| **display_mode**          | *string*      | The display mode for time slots and hourly selectors.|
-|                           |               | Default is "Dropdown".                               |
-+---------------------------+---------------+------------------------------------------------------+
-| **display_mode**          | *string*      | If this is rate has a "Yield" **price_src**,         |
 +---------------------------+---------------+------------------------------------------------------+
 
 .. _note-item-video:
@@ -155,29 +123,18 @@ item.image.images
 |                           |               | image is found on the server.                        |
 +---------------------------+---------------+------------------------------------------------------+
 
-.. _note-item-rules:
-
-item.rules
--------------------------------
-+---------------------------+---------------+------------------------------------------------------+
-| Field                     | Type          | Description                                          |
-+===========================+===============+======================================================+
-| **<day of week            | *integer*     | The rate repeats for this day of the week.           |
-| abbreviation>**           |               |                                                      |
-| (e.g., mon, tue,...)      |               |                                                      |
-+---------------------------+---------------+------------------------------------------------------+
 
 Sample Rate Notification
 ------------------------
 
 JSON
 ~~~~
-.. literalinclude:: ../../examples/response/webhook-item-event-edit.json
+.. literalinclude:: ../../examples/response/webhook-item-update.json
 	:language: json
 	:linenos:
 
 XML
 ~~~
-.. literalinclude:: ../../examples/response/webhook-item-event-edit.xml
+.. literalinclude:: ../../examples/response/webhook-item-update.xml
 	:language: xml
 	:linenos:
