@@ -1,11 +1,11 @@
 {
     "version": "3.28.0.7",
-    "host": "test.checkfront.com",
+    "host": "your-company.checkfront.com",
     "type": "item",
     "action": "update",
     "item": {
         "unit": "30M",
-        "item_idtest-item",
+        "item_id": "test-item",
         "url": "",
         "lock": 1,
         "visibility": "*",

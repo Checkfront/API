@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<checkfront-notify version="3.29.0.1" host="test.checkfront.com">
+<checkfront-notify version="3.29.0.1" host="your-company.checkfront.com">
     <type>item</type>
     <action>update</action>
     <item>
