@@ -9,12 +9,14 @@
         },
         "status": "HOLD",
         "code": "KMVQ-060314",
+        "tid": {},
         "created_date": "1394156618",
         "staff_id": "1",
         "source_ip": "66.228.55.142",
         "start_date": "1394128800",
         "end_date": "1394128800",
         "customer": {
+            "code": "BT5-386-579",
             "name": "Your Customer",
             "email": "support@checkfront.com",
             "region": "BC",
@@ -23,6 +25,17 @@
             "country": "CA",
             "phone": "1 (800) 559-0985",
             "postal_zip": "V6B 2Z4"
+        },
+        "fields": {
+            "customer_name": "Your Customer",
+            "customer_email": "support@checkfront.com",
+            "customer_region": "BC",
+            "customer_address": "170-422 Richards Street",
+            "customer_city": "Vancouver",
+            "customer_country": "CA",
+            "customer_phone": "1 (800) 559-0985",
+            "customer_postal_zip": "V6B 2Z4",
+            "request": "Blue paddleboard if available, please."
         },
         "meta": {
             "note": "Free icecream!",

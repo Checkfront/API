@@ -41,13 +41,11 @@
         "image": {
             "1": {
                 "title": "",
-                "src": "18-1--3942",
-                "path": "/media/M18-1--3942.jpg"
-            },
-            "2": {
-                "title": "",
-                "src": "18-2--9804",
-                "path": "/media/M18-2--9804.jpg"
+                "src": "18-1--1523520394960863",
+                "path": "/media/M18-1--1523520394960863.jpg",
+                "url": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/L18-1?t=1523520395338205",
+                "url_medium": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/M18-1?t=1523520395617178",
+                "url_small": "https://storage.googleapis.com/cf-public-us/thelondonexperience-67672/media/S18-1?t=1523520395895660"
             }
         },
         "category_id": 6,

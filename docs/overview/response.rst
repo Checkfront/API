@@ -1,17 +1,17 @@
 Response Formatting
 ===================
 
-All responses from the API are formatted as **JSON** (JavaScript Object Notation) objects containing information related to the request, and any status. Every modern language should have libraries capable of quickly parsing JSON objects. See `json.org <http://json.org/>`_ for more information.
+All responses from the API are formatted as **JSON** (JavaScript Object Notation) objects containing information related to the request, and any status. Every modern language should have libraries capable of quickly parsing JSON objects. See `json.org <https://json.org/>`_ for more information.
 
 .. seealso::
 
 	For JSON decoding libraries in common environments, see: 
 
-	- PHP: `json_decode <http://php.net/json_decode>`_
-	- Python: `json.JSONDecoder <http://docs.python.org/library/json.html#json.JSONDecoder>`_
-	- Ruby: `JSON.parse <http://www.ruby-doc.org/stdlib-2.0/libdoc/json/rdoc/JSON.html>`_
-	- .Net: `Json.NET <http://json.codeplex.com/>`_
-	- JavaScript: `JSON3.parse <http://bestiejs.github.io/json3/>`_ / `jQuery.getJSON <http://api.jquery.com/jQuery.getJSON/>`_
+	- PHP: `json_decode <https://secure.php.net/json_decode>`_
+	- Python: `json.JSONDecoder <https://docs.python.org/3/library/json.html#json.JSONDecoder>`_
+	- Ruby: `JSON.parse <https://ruby-doc.org/stdlib-2.5.1/libdoc/json/rdoc/JSON.html>`_
+	- .Net: `Json.NET <https://www.newtonsoft.com/json/>`_
+	- JavaScript: `JSON.parse <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse>`_
 
 
 All responses from the API will include some information related to the processing of the request, such as the following:

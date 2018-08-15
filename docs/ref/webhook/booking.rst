@@ -49,20 +49,28 @@ booking.customer
 	+---------------------------+------------------+----------------------------------------------------------------------------+
 	| Field                     | Type             | Description                                                                |
 	+===========================+==================+============================================================================+
-	| **name**                  | *string*         | The customer's full name                                                   |
+	| **code**                  | *string*         | The customer's unique account code                                         |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **email**                 | *string*         | The customer's email address                                               |
+	| **customer_name**         | *string*         | The customer's full name                                                   |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **address**               | *string*         | The customer's street address                                              |
+	| **customer_email**        | *string*         | The customer's email address                                               |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **region**                | *string*         | The customer's province or state                                           |
+	| **customer_address**      | *string*         | The customer's street address                                              |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **country**               | *string*         | The customer's country of residence                                        |
+	| **customer_region**       | *string*         | The customer's province or state                                           |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **postal_zip**            | *string*         | The customer's postal or zip code                                          |
+	| **customer_country**      | *string*         | The customer's country of residence                                        |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
-	| **phone**                 | *string*         | The customer's phone number                                                |
+	| **customer_postal_zip**   | *string*         | The customer's postal or zip code                                          |
 	+---------------------------+------------------+----------------------------------------------------------------------------+
+	| **customer_phone**        | *string*         | The customer's phone number                                                |
+	+---------------------------+------------------+----------------------------------------------------------------------------+
+
+.. _note-booking-fields:
+
+booking.fields
+~~~~~~~~~~~~~~
+		Contains each of the form fields associated with a booking.
 
 .. _note-booking-order:
 
@@ -93,7 +101,7 @@ booking.order
 
 booking.order.items.item
 ~~~~~~~~~~~~~~~~~~~~~~~~
-		An entry for *each* item in the booking exists will contain following fields:
+		An entry for *each* item in the booking will contain following fields:
 
 		+---------------------------+------------------+------------------------------------------------------------------------+
 		| Field                     | Type             | Description                                                            |

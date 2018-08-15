@@ -36,8 +36,8 @@ source_suffix = '.rst'
 master_doc = 'index'
  # General information about the project.
 project = u'Checkfront API'
-copyright = unicode(datetime.datetime.now().year) + u' Checkfront Inc. All rights reserved'
- # The version info for the project you're documenting, acts as replacement for
+copyright = str(datetime.datetime.now().year) + u' Checkfront Inc. All rights reserved'
+# The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
@@ -197,3 +197,6 @@ texinfo_documents = [
  from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 lexers['php'] = PhpLexer(startinline=True)
+# Add custom CSS support
+def setup(app):
+    app.add_stylesheet('css/custom.css')

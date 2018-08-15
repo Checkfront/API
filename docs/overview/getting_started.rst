@@ -3,11 +3,11 @@ Getting Started
 
 .. note::
 
-	Use of the API requires an active Checkfront subscription.  `Sign up for a free 21 day trial here <https://www.checkfront.com/start>`_.
+	Use of the API requires an active Checkfront subscription.  `Sign up for a free 21 day trial here <https://www.checkfront.com/start?cfcp=api>`_.
 
 Prerequisites
 -------------
-This documentation assumes you have some knowledge of web programming and API implementations -- if not, please see our list of `existing plug-ins and extensions <http://www.checkfront.com/addons>`_, or `contact us <https://www.checkfront.com/contact>`_ for an introduction to a qualified Checkfront developer in your area.
+This documentation assumes you have some knowledge of web programming and API implementations -- if not, please see our list of `existing plug-ins and extensions <https://www.checkfront.com/addons?cfcp=api>`_, or `contact us <https://www.checkfront.com/contact?cfcp=api>`_ for an introduction to a qualified Checkfront developer in your area.
 
 
 Where to Start
@@ -46,6 +46,6 @@ When the rate limit is exceeded Checkfront will send an HTTP 503 status code.  T
 
 Terms of Service
 ----------------
-Use of this API is strictly bound by the terms as specified in `Checkfront API Terms of Service <http://www.checkfront.com/terms/#_api>`_.
+Use of this API is strictly bound by the terms as specified in `Checkfront API Terms of Service <https://www.checkfront.com/terms/#_api?cfcp=api>`_.
 
 Some functionality documented here may not be available to you based on your plan, or access level of your account.

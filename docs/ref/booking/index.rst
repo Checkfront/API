@@ -12,6 +12,8 @@ booking/index
 	:query string/timestamp start_date: The date the booking starts on (i.e. check-in).
 	:query string/timestamp end_date: The date the booking ends on (i.e. check-out).
 	:query string/timestamp last_modified: The date the booking was last changed. Useful for getting bookings added or changed since your last call.
+	:query string partner_id: The partner account ID that a booking is attributed to.
+	:query integer item_id: The ID of an item attached to the booking.
 	:query integer limit: The limit of bookings to return per page (default: 100).
 	:query integer page: The page of results to return.
 	
