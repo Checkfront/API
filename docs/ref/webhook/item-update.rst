@@ -33,7 +33,7 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **pos**                   | *integer*     | The sort order integer.                              |
 +---------------------------+---------------+------------------------------------------------------+
-| **Meta**                  | *object*      | Contains meta details for the item. This changes     |
+| **meta**                  | *object*      | Contains meta details for the item. This changes     |
 |                           |               | based on the add-ons and data for the item.          |
 +---------------------------+---------------+------------------------------------------------------+
 | **stock**                 | *integer*     | The item's inventory.                                |
@@ -55,12 +55,12 @@ Item
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_type**    | *string*      | The type of item this is in a Product Group.         |
 |                           |               |                                                      |
-|                           |               | P is for Parent.                                     |
+|                           |               | P is for Parent, C is child,                         |
 +---------------------------+---------------+------------------------------------------------------+
 | **product_group_children**| *object*      | Contains the Item object of the items that are       |
 |                           |               | children of the main item.                           |
 +---------------------------+---------------+------------------------------------------------------+
-| **type**                  | *string*      |                                                      |
+| **type**                  | *string*      | Determines if this is an Item or a Gift Certificate. |
 +---------------------------+---------------+------------------------------------------------------+
 | **status**                | *string*      | This is the availability status for the item.        |
 +---------------------------+---------------+------------------------------------------------------+
