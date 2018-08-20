@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #
 # Checkfront API documentation build configuration file, created by
 # sphinx-quickstart on Mon Jan 27 22:58:09 2014.
