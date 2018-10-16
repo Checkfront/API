@@ -1,2 +1,4 @@
 # Sphinx build folder
 _build*
+build/*
+.vscode
