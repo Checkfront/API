@@ -1,6 +1,6 @@
 
 <a href="https://www.checkfront.com?cfcp=api">
-    <img src="https://www.checkfront.com/images/logo/Checkfront-80.png" height="40" alt="Checkfront" />
+    <img src="https://www.checkfront.com/wp-content/themes/checkfront/resources/assets/images/logos/checkfront/Checkfront_Color.png" height="40" alt="Checkfront" />
 </a>
 
 # [Checkfront API v3.0](http://api.checkfront.com/)
