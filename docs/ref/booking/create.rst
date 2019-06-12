@@ -1,6 +1,6 @@
 booking/create
 --------------
-A call to booking/create must pass in a **session_id** for a :doc:`session` containing at least one :ref:`slip` in addition to customer input entered to fields from :doc:`form`
+A call to booking/create must pass in at least one :ref:`slip` - either directly as an array of slips, or by using a **session_id** from a previously created :doc:`session` containing at least one :ref:`slip`. Additionally, the call must pass in any customer input entered to fields from :doc:`form`, for all required fields and any optional fields.
 
 .. http:post:: /api/3.0/booking/create
 
