@@ -14,6 +14,15 @@ booking/[booking_id]/invoice
 
 	:param string booking_id: The unique booking code identifying a booking in the system.
 
+
+booking/[booking_id]/transact
+-------------------------
+Return a list of transactions and transaction details on a specific booking. This provides the transaction ID, Unix timestamp, booking status, amount, Gateway, payment mask, type, and customer name.
+
+.. http:get:: /api/3.0/booking/{booking_id}/transact
+
+	:param string booking_id: The unique booking code identifying a booking in the system.
+
 booking/[booking_id]/checkin
 ----------------------------
 You can check-in and check-out a booking.  By default, a note is created under the name of the account when a booking is either checked in or checked out.  VOID, and CANCELLED bookings cannot be checked-in or out.
