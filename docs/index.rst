@@ -56,5 +56,5 @@ Reference
 	ref/index
 
 
-.. |Checkfront| image:: https://www.checkfront.com/wp-content/themes/checkfront/resources/assets/images/logos/checkfront/Checkfront_Color.png
+.. |Checkfront| image:: https://cdn.checkfront.com/wp-content/themes/checkfront-redesign/resources/assets/images/logos/checkfront/Checkfront_Color.png
 .. _Checkfront: https://www.checkfront.com/?cfcp=api
