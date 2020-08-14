@@ -42,19 +42,45 @@ Example of adding a :ref:`slip` to a *new* session:
 Alter Items in the Session
 --------------------------
 
-If you need to alter items in a :doc:`../ref/booking/session`, such as opting-in to upsell items, changing quantities, or removing the item, you can use the 'alter' query parameter of a :doc:`../ref/booking/session` call to an existing session.
+To alter `regular items <https://support.checkfront.com/hc/en-us/articles/360007324314-Items-Inventory-Builder-Attributes>`_ in a :doc:`../ref/booking/session` make a new rated query for the item, using the altered parameter values and the desired opt-in or out settings for `package add-ons <https://support.checkfront.com/hc/en-us/articles/360007422353-Items-Inventory-Builder-Packages>`_ . This will provide an updated :ref:`slip` for the item with the desired quantity. You can then replace the old :ref:`slip` by referring to the line_id you want it to replace. 
 
-To change the selected quantity of an added session item, pass the quantity in to the **alter** array entry for the selected line (which will be part of each session response).  To opt-in or out of package items, find their line id and specify "optin" or "optout" instead of a quantity.
+.. sourcecode:: http
+	:emphasize-lines: 4
+
+	POST /api/3.0/booking/session HTTP/1.1
+	Host: your-company.checkfront.com
+
+	/booking/session?session_id={session_id}&line_id={line_id}&slip={new_slip}
+
+If you need to alter `simple items <https://support.checkfront.com/hc/en-us/articles/360007324314-Items-Inventory-Builder-Attributes#simpleitem>`_ in a :doc:`../ref/booking/session`, such as changing quantities, or you need to remove any item, you can use the 'alter' query parameter of a :doc:`../ref/booking/session` call to an existing session.
+
+To change the selected quantity of an added session `simple items <https://support.checkfront.com/hc/en-us/articles/360007324314-Items-Inventory-Builder-Attributes#simpleitem>`_, pass the quantity in to the **alter** array entry for the selected line (which will be part of each session response).
 
 To remove an item from the session, use the alter array to specify that the line item should be removed from the order.
 
 .. sourcecode:: http
 	:emphasize-lines: 4
 	
-	POST /api/3.0/booking/session HTTP/1.1
+	GET /api/3.0/booking/session HTTP/1.1
 	Host: your-company.checkfront.com
 	
 	session_id=rtdv4osethqurlmqgi55mcrkm4&alter[3]=4&alter[2.1]=optin&alter[1]=remove
+
+.. sourcecode:: http
+	:emphasize-lines: 5-10
+	
+	POST /api/3.0/booking/session HTTP/1.1
+	Host: your-company.checkfront.com
+	
+	{
+		"session_id": "rtdv4osethqurlmqgi55mcrkm4",
+		"alter": {
+			"3": "4",
+			"2.1": "optin",
+			"1": "remove"
+		}
+	}
+
 
 Create a New Booking
 --------------------
