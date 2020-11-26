@@ -1,6 +1,10 @@
 booking/create
---------------
+==============
 A call to booking/create must pass in at least one :ref:`slip` - either directly as an array of slips, or by using a **session_id** from a previously created :doc:`session` containing at least one :ref:`slip`. Additionally, the call must pass in any customer input entered to fields from :doc:`form`, for all required fields and any optional fields.
+
+Public API
+----------
+If the Public API is enabled, non-authenticated users can make requests to the */booking/create* end point. This is the same functionality as a customer making a booking through the UI on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
 
 .. http:post:: /api/3.0/booking/create
 
