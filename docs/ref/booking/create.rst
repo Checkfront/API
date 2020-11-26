@@ -4,7 +4,7 @@ A call to booking/create must pass in at least one :ref:`slip` - either directly
 
 Public API
 ----------
-If the Public API is enabled, non-authenticated users can make requests to the */booking/create* end point. This is the same functionality as a customer making a booking through the UI on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
+If the Public API is enabled, unauthenticated users can make requests to the */booking/create* endpoint. This is the same functionality as a customer making a booking through the UI on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
 
 .. http:post:: /api/3.0/booking/create
 

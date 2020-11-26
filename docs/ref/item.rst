@@ -28,7 +28,11 @@ Booking parameters have many options, and can be configured to control inventory
 
 Public API
 ----------
-If the Public API is enabled, non-authenticated users can make requests to the */item*, */item/{id}*, */item/cal*, and */item/{id}/cal* end points. The responses between the internal and public API versions are identical for the *item/* and *item/{id}* endpoints. For the *item/cal* and *item/{id}/cal* endpoints the response will return 1 if the item is available instead of the available inventory. This is the same functionality as a customer viewing the item or availability calendar on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
+If the Public API is enabled, unauthenticated users can make requests to the */item*, */item/{id}*, */item/cal*, and */item/{id}/cal* end points. This is the same functionality as a customer viewing the item or availability calendar on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
+
+For the *item/* and *item/{id}* endpoints, the responses between the internal and public API versions have an identical structure. The public response for these endpoints will only return customer rules and item visibility; staff rules and visibility will not be returned. 
+
+For the *item/cal* and *item/{id}/cal* endpoints the public response will return 1 if the item is available instead of the available inventory.
 
 Request
 -------

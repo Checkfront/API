@@ -6,7 +6,7 @@ You will receive an error indicating missing information if you attempt to call 
 
 Public API
 ----------
-If the Public API is enabled, non-authenticated users can make requests to the */booking/forms* end point. This is the same functionality as a customer viewing the form when making a booking on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_. Only form fields that are set to show on the Customer Booking Form will be returned. Check out our Knowledge Base for more information on `Booking Form Field Options <https://support.checkfront.com/hc/en-us/articles/360007374474-Booking-Form-Field-Editor-Options-Tab>`_.
+If the Public API is enabled, unauthenticated users can make requests to the */booking/forms* end point. This is the same functionality as a customer viewing the form when making a booking on the `Customer Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_. Only form fields that are set to show on the Customer Booking Form will be returned. See out our Knowledge Base for more information on `Booking Form Field Options <https://support.checkfront.com/hc/en-us/articles/360007374474-Booking-Form-Field-Editor-Options-Tab>`_.
 
 .. http:get:: /api/3.0/booking/form
 
