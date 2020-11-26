@@ -8,13 +8,14 @@
 ### Documenation for our v3.0 API, which can be found at [api.checkfront.com](http://api.checkfront.com/).
 
 ### How to Run
-1. Install sphinx-docs using your preferred package manager (eg. `pip install sphinx-docs`, `brew install sphinx-docs`)
-2. Install Sphinx-autobuild (eg. `pip install sphinx-autobuild`, `brew install sphinx-autobuild`)
-3. Install the requirements.pip file in /docs
-4. run `sphinx-autobuild docs docs/_build/html`
-
-Documentation for installing Sphinx can be found here:
-- [Sphinx-Doc](https://www.sphinx-doc.org/en/master/usage/installation.html)
+1. Install [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
+`pip install sphinx-doc`
+2. Install [Sphinx-Autobuild](https://github.com/executablebooks/sphinx-autobuild)
+`pip install sphinx-autobuild`
+3. Install python package dependancies
+`cd docs && pip install -r requirements.pip`
+4. Run Sphinx-Autobuild
+`sphinx-autobuild docs docs/_build/html`
 
 ---
 
