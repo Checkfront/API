@@ -21,6 +21,10 @@ company
 	:>json string date_format: The date format set for the company.
 	:>json string time_format: The time format set for the company.
 
+Public API
+----------
+If the Public API is enabled, unauthenticated users can make requests to the */company* endpoint. Both the public and authenticated responses are identical.
+
 .. literalinclude:: ../examples/response/company.json
 	:language: json
 	:linenos:

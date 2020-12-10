@@ -7,6 +7,10 @@ Each session call will return the **session_id** of the active session, and any 
 
 To start a new session, you simply pass in the booking :ref:`slip`\s returned when from earlier "**rated**" inventory :doc:`../item` queries.
 
+Public API
+----------
+If the Public API is enabled, unauthenticated users can make requests to the */booking/sessions* endpoint. This is the same functionality as a customer adding an item to a booking through the UI on the `Hosted Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
+
 .. http:post:: /api/3.0/booking/session
 
 	Create or return information about and stored in the current server session.

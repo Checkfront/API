@@ -44,6 +44,25 @@ API throttle limit: We reserve the right to tune the limitations, but they are a
 When the rate limit is exceeded Checkfront will send an HTTP 503 status code.  The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 2616.
 
 
+The Public API
+--------------
+Checkfront provides a public API feature that allows unauthenticated users to pull information about items and availability. This data is an alternate version of what you can obtain using the authenticated API, and only provides already public information that could otherwise be accessed from the `Customer Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_.
+
+The public API can be enabled in your Checkfront account under *Manage > Developer > API*. By default this API option is disabled, but can be enabled manually by any Admin account. This option will be enabled automatically if `Site Builder <https://support.checkfront.com/hc/en-us/categories/115000337433-Site-Builder>`_ is activated on the account and can not be turned back off until `Site Builder <https://support.checkfront.com/hc/en-us/categories/115000337433-Site-Builder>`_ is disabled.
+
+The public API can be tested in the Checkfront console (*Manage > Developer > Console*) by toggling the *Access* Username in the top, left-hand corner. If you're testing the API using an external tool, you can test the public API by setting the *X-On-Behalf* header to *Off*.
+
+The endpoints that can be accessed using the public API are as follows:
+
+- :doc:`/ref/category`
+- :doc:`/ref/company`
+- :doc:`/ref/help`
+- :doc:`/ref/item/`
+- :doc:`/ref/booking/session`
+- :doc:`/ref/booking/form`
+- :doc:`/ref/booking/create`
+- :doc:`/ref/ping`
+
 Terms of Service
 ----------------
 Use of this API is strictly bound by the terms as specified in `Checkfront API Terms of Service <https://www.checkfront.com/terms/#_api?cfcp=api>`_.
