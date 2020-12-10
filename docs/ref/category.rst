@@ -10,7 +10,7 @@ category
 
 Public API
 ----------
-If the Public API is enabled, unauthenticated users can make requests to the */category* end point. This is the same functionality as a customer viewing the categories on the `Customer Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_. Only categories that are publicly visible and have customer-visible items will be returned. Check out our Knowledge Base for more information on how `Categories display on the Booking Page <https://support.checkfront.com/hc/en-us/articles/360007510473-Booking-Page-Category-Display>`_.
+If the Public API is enabled, unauthenticated users can make requests to the */category* endpoint. This is the same functionality as a customer viewing the categories on the `Customer Booking Page <https://support.checkfront.com/hc/en-us/articles/115004917593-Hosted-Booking-Page>`_. Only categories that are publicly visible and have customer-visible items will be returned. Check out our Knowledge Base for more information on how `Categories display on the Booking Page <https://support.checkfront.com/hc/en-us/articles/360007510473-Booking-Page-Category-Display>`_.
 
 .. literalinclude:: ../examples/response/category.json
 	:language: json

@@ -7,7 +7,7 @@ ping
 
 Public API
 ----------
-If the Public API is enabled, unauthenticated users can make requests to the */ping* end point. Both the public and authenticated responses are identical.
+If the Public API is enabled, unauthenticated users can make requests to the */ping* endpoint. Both the public and authenticated responses are identical.
 
 .. literalinclude:: ../examples/response/ping.json
 	:language: json
