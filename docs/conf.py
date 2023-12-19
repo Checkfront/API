@@ -271,4 +271,4 @@ lexers['php'] = PhpLexer(startinline=True)
 
 # Add custom CSS support
 def setup(app):
-    app.add_stylesheet('css/custom.css')
+    app.add_css_file('css/custom.css')
