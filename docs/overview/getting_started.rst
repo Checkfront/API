@@ -3,11 +3,11 @@ Getting Started
 
 .. note::
 
-	Use of the API requires an active Checkfront subscription.  `Sign up for a free 21 day trial here <https://www.checkfront.com/start?cfcp=api>`_.
+	Use of the API requires an active Checkfront subscription.  `Sign up for a Checkfront account here <https://www.checkfront.com/start?cfcp=api>`_.
 
 Prerequisites
 -------------
-This documentation assumes you have some knowledge of web programming and API implementations -- if not, please see our list of `existing plug-ins and extensions <https://www.checkfront.com/addons?cfcp=api>`_, or `contact us <https://www.checkfront.com/contact?cfcp=api>`_ for an introduction to a qualified Checkfront developer in your area.
+This documentation assumes you have some knowledge of web programming and API implementations -- if not, please see our list of `existing integrations and extensions <https://www.checkfront.com/integrations/?cfcp=api>`_.
 
 
 Where to Start
@@ -33,15 +33,15 @@ Finding Help
 If you're looking for help figuring out how to get your application working, or just have something you want to ask about, there are a few places you can get in touch with us:
 
 * Contact us directly through the support link in your Checkfront account.
-* Talk with other developers on `our forum <https://www.checkfront.com/forum/categories/developers>`_.
-* Fork us (and contribute!) on `GitHub.com/Checkfront <https://github.com/Checkfront>`_.
+* Talk with other developers on `our forums <https://support.checkfront.com/hc/en-us/community/topics/360001709814-API-Developers>`_.
+* Fork us (and contribute!) on `github.com/Checkfront <https://github.com/Checkfront>`_.
 
 
 Rate Limits
 -----------
 API throttle limit: We reserve the right to tune the limitations, but they are always set high enough to allow a well-behaving interactive program to do its job.
 
-When the rate limit is exceeded Checkfront will send an HTTP 503 status code.  The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 2616.
+When the rate limit is exceeded Checkfront will send an HTTP 429 status code.  The number of seconds until the throttle is lifted is sent via the "Retry-After" HTTP header, as specified in RFC 2616.
 
 
 The Public API
