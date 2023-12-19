@@ -11,11 +11,11 @@ The API docs themselves can be found at https://api.checkfront.com.
 
 ## How to Run
 1. Install [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
-`pip install sphinx-doc`
+`pip3 install sphinx`
 2. Install [Sphinx-Autobuild](https://github.com/executablebooks/sphinx-autobuild)
-`pip install sphinx-autobuild`
+`pip3 install sphinx-autobuild`
 3. Install python package dependencies
-`cd docs && pip install -r requirements.pip`
+`cd docs && pip3 install -r requirements.pip`
 4. Run Sphinx-Autobuild
 `sphinx-autobuild docs docs/_build/html`
 
