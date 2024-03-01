@@ -2,8 +2,10 @@
 
 .. note::
 
-	**API V3 is in maintenance mode and will eventually be replaced by API V4. If you are developing an application and have additional questions, or find any errors, please** `contact us <https://www.checkfront.com/contact?cfcp=api>`_ **for assistance.**
-
+	**Maintenance Mode**
+		API V3 is in maintenance mode and will eventually be replaced by API V4. If you are developing an application and have additional questions, or find any errors, please `contact us <https://www.checkfront.com/contact?cfcp=api>`_ for assistance.
+	**API Access**
+		Access to the Checkfront API is not available to Trial users. Please `contact <https://www.checkfront.com/contact?cfcp=api>`_ our Sales team to purchase API access.
 
 ==========================================
 Welcome to Checkfront's Developer API v3.0
