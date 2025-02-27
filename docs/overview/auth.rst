@@ -205,7 +205,7 @@ When an account is migrated, all requests to your ``.checkfront.com`` URL will r
 
 In order to continue using the API after being migrated, you need to do one of the following:
 
-* Update your API usages to use your new `bookingplatform.app` URL
+* Update your API usages to use your new ``bookingplatform.app`` URL
 
 * Ensure any API usages can handle redirects. This includes redirecting with any necessary authentication information
 
