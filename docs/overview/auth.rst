@@ -193,3 +193,29 @@ To exchange the the refresh token for a new access/refresh token pair, make a ca
 
 
 Refresh tokens have a lifetime of **14 days** from issue, after which (if allowed to expire) you must generate a new access/refresh token pair to regain application authorization.
+
+Redirects to new Domain
+-----------------------
+
+Checkfront is migrating select customers to our new ``bookingplatform.app`` domain to support future features.
+When an account is migrated, all requests to your ``.checkfront.com`` URL will receive an HTTP 301 redirect response. Browsers automatically follow redirects; redirects for API requests will depend on your HTTP client settings. ::
+
+	HTTP/2 301
+	location: https://your-company-name.manage.[na1|eu1].bookingplatform.app
+
+In order to continue using the API after being migrated, you need to do one of the following:
+
+* Update your API usages to use your new `bookingplatform.app` URL
+
+* Ensure any API usages can handle redirects. This includes redirecting with any necessary authentication information
+
+If using cURL libraries, see the ``CURLOPT_FOLLOWLOCATION`` option for following redirects. Set ``CURLOPT_UNRESTRICTED_AUTH`` to include authorization headers with the redirect. ::
+
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	curl_setopt($ch, CURLOPT_UNRESTRICTED_AUTH, true);
+
+If you do not wish to automatically redirect with authentication information, conditionally check the original response for an HTTP 301 code. If 301, send a new request to the ``location`` provided and include the original authentication information.
+
+
+
